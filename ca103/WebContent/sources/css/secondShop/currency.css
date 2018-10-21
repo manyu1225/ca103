@@ -1,0 +1,20 @@
+    #display-color {
+        color: #0b3c5d;
+    }
+    
+    .hidden{
+        display: none;
+    }
+
+    .font-currency{
+      font-size:1rem;
+    }
+    .font-currencyTop{
+      font-size:1.4rem;
+    }
+    .font-currencyCash{
+      font-size:1.6rem;
+    }
+    .shodd{
+        box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    }

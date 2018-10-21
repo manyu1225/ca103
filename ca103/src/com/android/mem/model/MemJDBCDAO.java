@@ -1,0 +1,408 @@
+package com.android.mem.model;
+
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.sql.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.android.activity.model.Activity_VO;
+
+public class MemJDBCDAO implements MemDAO_interface {
+	String driver = "oracle.jdbc.driver.OracleDriver";
+	String url = "jdbc:oracle:thin:@localhost:1521:XE";
+	String user = "CA103G2";
+	String pw = "CA103G2";
+	//to_char(MEM_BIRTHDAY,'yyyy-mm-dd')
+	private static final String INSERT_STMT = "INSERT INTO MEMBER(MEM_ID,MEM_AC,MEM_PASSWORD,MEM_FIRSTNAME,MEM_LASTNAME,MEM_TEL,MEM_PHONE,MEM_EMAIL,MEM_PHOTO,MEM_CART_PHOTO,MEM_NICKNAME,MEM_ABOUTME,MEM_BIRTHDAY)"
+			+ "values ('M'||LPAD(to_char(mem_seq.NEXTVAL), 6, '0'),?,?,?,?,?,?,?,?,?,?,?,?)";
+	private static final String DELETE_STMT = "DELETE FROM MEMBER where empno = ?";
+	private static final String GET_ONE_STMT = "SELECT MEM_ID,MEM_AC,MEM_PASSWORD,MEM_FIRSTNAME,MEM_LASTNAME,MEM_TEL,MEM_PHONE,MEM_EMAIL,MEM_STATUS,MEM_PHOTO,MEM_CART_PHOTO,MEM_CART_TYPE,MEM_NICKNAME,MEM_BIRTHDAY,MEM_ROT_BADTIMES,MEM_ACT_BADTIMES,MEM_GRU_BADTIMES,MEM_POST_BADTIMES,MEM_SALE_BADTIMES,MEM_ABOUTME FROM MEMBER where mem_ac = ?";
+	private static final String GET_ALL_STMT = "SELECT MEM_ID,MEM_AC,MEM_PASSWORD,MEM_FIRSTNAME,MEM_LASTNAME,MEM_TEL,MEM_PHONE,MEM_EMAIL,MEM_STATUS,MEM_PHOTO,MEM_CART_PHOTO,MEM_CART_TYPE,MEM_NICKNAME,MEM_BIRTHDAY,MEM_ROT_BADTIMES,MEM_ACT_BADTIMES,MEM_GRU_BADTIMES,MEM_POST_BADTIMES,MEM_SALE_BADTIMES,MEM_ABOUTME FROM MEMBER order by MEM_ID";
+	private static final String UPDATE_STMT = "UPDATE MEMBET SET MEM_TEL,MEM_PHONE=?,MEM_EMAIL=?,MEM_PHOTO=?,MEN_CART_PHOTO=?,MEM_CART_TYPE=?,MEM_NICKNAME=?,MEM_ABOUTME=?,MEM_BIRTHDAY=? WHERE MEM_ID =?";
+	private static final String PHOTO_FIND_STMT = "SELECT MEM_PHOTO MEM_NICKNAME FROM MEMBER BY MEM_AC";
+	
+	private static final String FIND_BY_ID_PASWD = "SELECT * FROM MEMBER WHERE mem_ac = ? AND  mem_password = ? ";
+	
+	@Override
+	public boolean isMember(String mem_ac, String mem_password) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		boolean isMember = false;
+		
+		System.out.println(" boolean isMember = ");
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, user, pw);
+			pstmt = conn.prepareStatement(FIND_BY_ID_PASWD);
+			System.out.println("FIND_BY_ID_PASWD = ");
+
+			pstmt.setString(1, mem_ac);
+			pstmt.setString(2, mem_password);
+			
+			rs = pstmt.executeQuery();
+
+			isMember = rs.next();//有此帳號回傳true並移動游標false-->true
+			
+			System.out.println("isMember = " + isMember);
+			
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException( e.getMessage());
+		} catch (SQLException e) {
+			throw new RuntimeException( e.getMessage());
+		} finally {
+			if (pstmt != null) {
+				try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}
+			}
+			if (conn != null) {
+				try {conn.close();} catch (SQLException e) {e.printStackTrace();}
+			}
+		}
+		
+		
+
+		return isMember;
+			
+	}
+		
+	@Override
+	public void insert(MemVO memVO) {
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, user, pw);
+			pstmt = conn.prepareStatement(INSERT_STMT);
+
+			pstmt.setString(1, memVO.getMem_ac());
+			pstmt.setString(2, memVO.getMem_password());
+			pstmt.setString(3, memVO.getMem_firstname());
+			pstmt.setString(4, memVO.getMem_lastname());
+			pstmt.setString(5, memVO.getMem_tel());
+			pstmt.setString(6, memVO.getMem_phone());
+			pstmt.setString(7, memVO.getMem_email());
+			pstmt.setBytes(8, memVO.getMem_photo());
+			pstmt.setBytes(9, memVO.getMem_cart_photo());
+			pstmt.setString(10, memVO.getMem_nickname());
+			pstmt.setString(11, memVO.getMem_aboutme());
+			pstmt.setDate(12, memVO.getMem_birthday());
+
+			pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+			throw new RuntimeException("ffe" + e.getMessage());
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException("" + e.getMessage());
+		} finally {
+			if (pstmt != null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace(System.err);
+				}
+			}
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace(System.err);
+				}
+			}
+		}
+	}
+
+	@Override
+	public void update(MemVO memVO) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, user, pw);
+			pstmt = conn.prepareStatement(UPDATE_STMT);
+
+			pstmt.setString(1, memVO.getMem_firstname());
+			pstmt.setString(2, memVO.getMem_lastname());
+			pstmt.setString(3, memVO.getMem_tel());
+			pstmt.setString(4, memVO.getMem_phone());
+			pstmt.setString(6, memVO.getMem_email());
+			pstmt.setBytes(7, memVO.getMem_photo());
+			pstmt.setBytes(8, memVO.getMem_cart_photo());
+			pstmt.setString(9, memVO.getMem_cart_type());
+			pstmt.setString(10, memVO.getMem_nickname());
+			pstmt.setString(11, memVO.getMem_aboutme());
+			pstmt.setDate(12, memVO.getMem_birthday());
+			pstmt.setString(13, memVO.getMem_id());
+
+			pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException("" + e.getMessage());
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException("" + e.getMessage());
+		} finally {
+			if (pstmt != null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+
+			}
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+
+	@Override
+	public void delete(String eme_id) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, user, pw);
+			pstmt = conn.prepareStatement(DELETE_STMT);
+
+			pstmt.setString(1, eme_id);
+
+			pstmt.executeUpdate();
+
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException("�銝鞈�澈撽����" + e.getMessage());
+		} catch (SQLException e) {
+			throw new RuntimeException("�����澈�隤�" + e.getMessage());
+		} finally {
+			if (pstmt != null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	@Override
+	public MemVO findByPrimarKey(String mem_ac) {
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		 MemVO memVO = null;
+
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, user, pw);
+			pstmt = conn.prepareStatement(GET_ONE_STMT);
+			pstmt.setString(1, mem_ac);
+
+			rs = pstmt.executeQuery();
+
+
+	while (rs.next()) {
+		memVO = new MemVO();
+
+				memVO.setMem_id(rs.getString("mem_id"));
+				memVO.setMem_ac(rs.getString("mem_ac"));
+				memVO.setMem_password(rs.getString("mem_password"));
+				memVO.setMem_firstname(rs.getString("mem_firstname"));
+				memVO.setMem_lastname(rs.getString("mem_lastname"));
+				memVO.setMem_phone(rs.getString("mem_phone"));
+				memVO.setMem_email(rs.getString("mem_email"));
+				memVO.setMem_status(new Integer(rs.getInt("mem_status")));
+				memVO.setMem_photo(rs.getBytes("mem_photo"));
+				memVO.setMem_cart_photo(rs.getBytes("mem_cart_photo"));
+				memVO.setMem_cart_type(rs.getString("mem_cart_type"));
+				memVO.setMem_nickname(rs.getString("mem_nickname"));
+				memVO.setMem_birthday(rs.getDate("mem_birthday"));
+				memVO.setMem_rot_badtimes(new Integer (rs.getInt("mem_rot_badtimes")));
+				memVO.setMem_act_badtimes(new Integer (rs.getInt("mem_act_badtimes")));
+				memVO.setMem_gru_badtimes(new Integer (rs.getInt("mem_gru_badtimes")));
+				memVO.setMem_sale_badtimes(new Integer(rs.getInt("mem_sale_badtimes")));
+				memVO.setMem_aboutme(rs.getString("mem_aboutme"));
+			
+	}
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException("�ClassNotFoundException銝鞈�澈撽����" + e.getMessage());
+		} catch (SQLException e) {
+			throw new RuntimeException("�����澈�隤�" + e.getMessage());
+		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return memVO;
+	}
+	@Override
+	public List<MemVO> getAll() {
+		List<MemVO> list = new ArrayList<MemVO>();
+		MemVO memVO = null;
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, user, pw);
+			pstmt = conn.prepareStatement(GET_ALL_STMT);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				memVO = new MemVO();
+				memVO.setMem_id(rs.getString("mem_id"));
+				memVO.setMem_ac(rs.getString("mem_ac"));
+				memVO.setMem_password(rs.getString("mem_password"));
+				memVO.setMem_firstname(rs.getString("mem_firstname"));
+				memVO.setMem_lastname(rs.getString("mem_lastname"));
+				memVO.setMem_tel(rs.getString("mem_tel"));
+				memVO.setMem_phone(rs.getString("mem_phone"));
+				memVO.setMem_email(rs.getString("mem_email"));
+				memVO.setMem_status(rs.getInt("mem_status"));
+				memVO.setMem_photo(rs.getBytes("mem_photo"));
+				memVO.setMem_cart_photo(rs.getBytes("mem_cart_photo"));
+				memVO.setMem_cart_type(rs.getString("mem_cart_type"));
+				memVO.setMem_nickname(rs.getString("mem_nickname"));
+				String burnDay = new SimpleDateFormat("yyyy-MM-dd").format(rs.getDate("mem_birthday"));
+				java.sql.Date date = java.sql.Date.valueOf(burnDay);
+				memVO.setMem_birthday(date);
+				memVO.setMem_rot_badtimes(rs.getInt("mem_rot_badtimes"));
+				memVO.setMem_act_badtimes(rs.getInt("mem_act_badtimes"));
+				memVO.setMem_gru_badtimes(rs.getInt("mem_gru_badtimes"));
+				memVO.setMem_post_badtimes(rs.getInt("mem_post_badtimes"));
+				memVO.setMem_sale_badtimes(rs.getInt("mem_sale_badtimes"));
+				memVO.setMem_aboutme(rs.getString("mem_aboutme"));
+				list.add(memVO);
+			}
+
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException(""+ e.getMessage());
+		} catch (SQLException e) {
+			throw new RuntimeException("" + e.getMessage());
+		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					e.printStackTrace(System.err);
+				}
+			}
+			if (pstmt != null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace(System.err);
+				}
+			}
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace(System.err);
+				}
+			}
+		}
+
+		return list;
+	}
+
+	public static byte[] getPictureByteArray_photo(String path) throws IOException {
+		File file = new File(path);
+		FileInputStream fis = new FileInputStream(file);
+
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		byte[] buffer = new byte[8192];
+		int i;
+		while ((i = fis.read(buffer)) != -1) {
+			baos.write(buffer, 0, i);
+		}
+		baos.close();
+		fis.close();
+
+		return baos.toByteArray();
+	}
+
+	public static void main(String[] args) throws IOException {
+		MemJDBCDAO dao = new MemJDBCDAO();
+		MemVO memVO1 = new MemVO();
+		
+		byte[] picCartPhoto = getPictureByteArray_photo(
+				"C:\\Users\\Java\\Desktop\\goodimg.jpg");
+		byte[] picMemPhoto = getPictureByteArray_photo(
+				"C:\\Users\\Java\\Desktop\\goodimg.jpg");
+		memVO1.setMem_ac("sinleman");
+		memVO1.setMem_password("ggyy12345");
+		memVO1.setMem_firstname("grace");
+		memVO1.setMem_lastname("king");
+		memVO1.setMem_phone("7789445612");
+		memVO1.setMem_email("ricksin1296@gmail.com");
+		memVO1.setMem_photo(picCartPhoto);
+		memVO1.setMem_cart_photo(picMemPhoto);
+		memVO1.setMem_cart_type("0");
+		memVO1.setMem_nickname("kk");
+		memVO1.setMem_aboutme("bb");
+		memVO1.setMem_birthday(java.sql.Date.valueOf("2018-09-13"));
+		dao.insert(memVO1);
+
+//		MemVO memVO2 = new MemVO();
+//		memVO2.setMem_id("M00005");
+//		memVO2.setMem_ac("sinleman");
+//		memVO2.setMem_password("ggyy12345");
+//		memVO2.setMem_firstname("grace");
+//		memVO2.setMem_lastname("king");
+//		memVO2.setMem_phone("7789445612");
+//		memVO2.setMem_email("ricksin1296@gmail.com");
+//		memVO2.setMem_status(0);
+//		memVO2.setMem_photo(picMemPhoto);
+//		memVO2.setMem_cart_photo(picCartPhoto);
+//		memVO2.setMem_cart_type("0");
+//		memVO2.setMem_nickname("嚙踝蕭謕蕭謢塚蕭謕蕭豲");
+//		memVO2.setMem_aboutme("嚙踝蕭謕�蕭謢�嚙踝蕭謕�蕭嚙踐�蕭�嚙踐�嚙踝蕭謕���嚙踝蕭謕");
+//		memVO2.setMem_birthday(null);
+//		memVO2.setMem_rot_badtimes(1);
+//		memVO2.setMem_act_badtimes(1);
+//		memVO2.setMem_gru_badtimes(1);
+//		memVO2.setMem_sale_badtimes(1);
+//		dao.update(memVO2);
+
+	}
+
+	
+
+}

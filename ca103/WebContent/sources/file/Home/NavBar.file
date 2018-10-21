@@ -1,0 +1,123 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.mem.model.*"%>
+
+<nav id="nav" class="navbar header-top  navbar-expand-lg  navbar-light bg-light navbar-trans">
+		<a class="navbar-brand" href="#"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav ml-sm-auto d-sm-flex">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i> 會員專區</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/mem/MemberMain.jsp"><i class="fas fa-address-card"></i> 管理個人資訊</a>
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/mem/MemberMes.jsp"><i class="fas fa-envelope"></i> 訊息</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-tachometer-alt"></i> 路線分享區</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="javascript:document.route_list.submit();">瀏覽所有路線</a>
+						<a class="dropdown-item" href="javascript:document.route_build.submit();">建立路線</a>
+						<a class="dropdown-item" href="javascript:document.route_collectionList.submit();">我的私密路線</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-calendar-alt"></i> 活動快訊</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/Forum/activity/activityList.jsp">瀏覽活動快訊</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bullhorn"></i> 討論區</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/Forum/forPos/forPostDisplayList.jsp">討論區列表</a>
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/Forum/forPos/insert_forPost.jsp">新增文章</a>
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/Forum/forPos/forPostManage.jsp">文章管理</a>
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/Forum/favPos/myFavPos.jsp">珍藏文章</a>
+
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i> 社群</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="javascript:document.com_list.submit();">瀏覽社群列表</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-gavel"></i> 二手拍賣</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/secondShop/Currency.jsp">自転幣</a>
+                        <a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/secondShop/productMem-sale.jsp">賣家中心</a>
+                        <a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/secondShop/productBuyList.jsp">買家中心</a>
+                        <a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/secondShop/productList.jsp"><i class="far fa-eye"></i>瀏覽商品列表</a>
+                    </div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bicycle"></i> 揪團</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/gp/GP_Browsing.jsp">瀏覽揪團列表</a>
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/gp/GP_Creating.jsp">建立揪團</a>
+						<a class="dropdown-item" href="<%=request.getContextPath()%>/front-end/gp/GP_List.jsp?listPage=1">揪團管理</a>
+					</div>
+				</li>
+				<P>
+					<li class="nav-item ">
+						<a class="nav-link sign-out-alt" href="<%=request.getContextPath()%>/HomePage.jsp"><i class="fas fa-home"></i> Home</a>
+					</li>
+<%
+                    if((request.getSession().getAttribute("memVO"))!=null){
+%>
+	                      <li class="nav-item">
+	                        <a class="nav-link" href="<%=request.getContextPath()%>/front-end/mem/MemberMain.jsp"><i class="fas fa-sign-out-alt"></i> <%= ((MemVO)request.getSession().getAttribute("memVO")).getMem_nickname() %></a>
+	                    </li>
+	                    <li class="nav-item">
+	                        <a class="nav-link" href="<%=request.getContextPath()%>/front-end/mem/mem.do?action=logout&mem_id=${memVO.mem_id}"><i class="fas fa-sign-out-alt"></i>登出</a>
+	                    </li>
+<%
+					}else{
+%>
+	                    <li class="nav-item">
+	                        <a class="nav-link" href="<%=request.getContextPath()%>/front-end/mem/Login.jsp"><i class="fas fa-sign-out-alt"> 登入</i></a>
+	                    </li>
+	                    <li class="nav-item">
+	                        <a class="nav-link" href="<%=request.getContextPath()%>/front-end/mem/register.jsp">註冊</a>
+	                    </li>
+<%
+                    }
+%>
+					   <li class="nav-item">
+                              <a class="nav-link" href="<%=request.getContextPath()%>/BackHomePage.jsp">後台</a>
+                          </li>
+					
+					
+				</ul>
+			</div>
+		</nav>
+		
+		
+		<!-- 瀏覽路線 -->
+		<form action="<%=request.getContextPath()%>/Route/RouteServlet.do" Method="POST" name="route_list">
+			<input type="hidden" value="getRouteList" name="action">
+			<input type="hidden" value="route" name="order">
+		</form>
+		
+		
+		<!-- 建立路線 -->
+		<form action="<%=request.getContextPath()%>/Route/RouteServlet.do" Method="POST" name="route_build">
+			<input type="hidden" value="insideRouteBuilding" name="action">
+		</form>
+		
+		
+		<!-- 管理路線 -->
+		<form action="<%=request.getContextPath()%>/RouteCollection/RouteCollectionServlet.do" Method="POST" name="route_collectionList">
+			<input type="hidden" value="getRouteCollectionList" name="action">
+			<input type="hidden" value="route" name="order">
+		</form>
+		
+		
+		<!-- 瀏覽社群 -->
+		<form action="<%=request.getContextPath()%>/com/ComServlet.do" Method="POST" name="com_list">
+			<input type="hidden" value="getComList" name="action">
+		</form>

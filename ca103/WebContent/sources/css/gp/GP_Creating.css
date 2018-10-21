@@ -1,0 +1,127 @@
+.paddingTop {
+/*     padding-top: 60px; */
+}
+
+
+
+
+
+
+/* lightBox */
+.title{
+    font-weight: bolder;
+    text-align: center;
+}  
+
+.section{
+	cursor:pointer;
+    height: 180px;
+    width:100%;
+    background-color: #d2e9ff;
+    margin: 5px;
+}
+.section:hover{
+    background-color: aquamarine;
+}
+
+.routeSection{
+    overflow-y: scroll;
+    width: 100%;
+    height: 75%;    
+}
+.rotSubmit{
+    position: absolute;
+    left: calc(50% - 60px);
+    bottom: 5px;
+}
+#lightBox{
+    display:none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(66,66,66,.8);
+    z-index: 10;
+}
+#routeSelect{
+    position: absolute;
+    top:12%;
+    left:15%;
+    background-color: white;
+    height: 80%;
+    width: 70%;
+}
+.selectedROUTE{
+    background-color:aqua;
+}
+.selectedROUTE:hover{
+    background-color: aqua;
+}
+
+.inline-Block{
+    display:inline-block;
+}
+
+
+      .row{
+        margin-right: 0;
+        margin-left: 0;
+      }
+        
+
+      /*�H�U���p�򪺵{���X*/
+
+      .route{
+        padding:0px 0px 0px 0px;
+      }
+
+      .row1{
+          border-color:#d2e9ff;
+          height: 180px;
+      }
+      .routeimg1{
+        padding: 5px;
+      }
+      .routeimg2{
+        padding: 5px;
+      }
+      .routeimg{
+        width: 100%;
+        padding: 5px;
+      }
+
+
+      .row2{
+          height: 30px;
+      }
+      .routename{
+      }
+      .routemem{
+      }
+
+      .row3{
+          height: 80px;
+          margin-top: 5px;
+      }
+      .routedes{
+      }
+      .routeno{
+        height:110px;
+      }
+
+
+
+      .row4{
+          height: 30px;
+          margin-top: 5px;
+      }
+
+
+
+
+
+/* ���~�T�� */
+.error{
+	color:red;
+	display:none;
+}
+

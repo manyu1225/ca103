@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Title Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-2"></div>
+            <div class="col-xs-12 col-sm-8" id="capture2">
+            	<div class="row">
+	                <div class="col-sm-offset-4 col-sm-4">
+	                    <div id="capture" style="border: solid 2px red;">
+	                        <p>HIHIHI !</p>
+	                    </div>
+	                </div>
+                </div>
+                <div>
+	                <table>
+	                    <tr>
+	                        <td>title1</td>
+	                        <td>title2</td>
+	                        <td>title3</td>
+	                    </tr>
+	                    <tr>
+	                        <td>
+	                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                        </td>
+	                        <td id="ta3" style="border: solid 1px red;color:blue;font-size:2rem">
+	                            Lorem ipsum dolor sit amet,
+	                        </td>
+	                        <td>
+	                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolorccaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                        </td>
+	                    </tr>
+	                </table>
+                </div>
+                <button id="btn">btn !!</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="html2canvas.js"></script>
+    <script type="text/javascript">
+    $('#btn').click(function() {
+        // html2canvas($('#capture2'))
+        html2canvas($('#ta3'), {
+            allowTaint: true, //允许污染
+            taintTest: true, //在渲染前测试图片(没整明白有啥用)
+            useCORS: true, //使用跨域(当allowTaint为true时这段代码没什么用,下面解释)
+            // background: "#fff",
+            onrendered: function(canvas) {
+                $('body').append(canvas)
+                imgBlob = canvas.toDataURL('image/png', 1.0); //将图片转为base64
+                console.log(imgBlob);
+                imgBlob = imgBlob.toString().substring(imgBlob.indexOf(",") + 1); //截取base64以便上传
+
+                after(imgBlob);
+            }
+        });
+    })
+
+    function after(st) {
+        console.log(st)
+        // var snapshot="" ;
+    }
+
+    // html2canvas(document.querySelector("#capture2")).then(canvas => {
+    //     document.body.appendChild(canvas)
+    // });
+
+
+
+    $(function() {
+
+        $("#btnOk").on('click', function() {
+
+            html2canvas($('div#photo01'), {
+                onrendered: function(canvas) {
+                    var imgCxt = canvas.toDataURL();
+                    $.post('${pageContext.request.contextPath}/image/upload.do', 
+                    	{ "data": imgCxt }, 
+                    	function(json) {
+                    		alert(json.msg);
+                    	}, 'json');
+                    document.body.appendChild(canvas);
+                },
+            });
+
+            $("#btnCancel").click();
+        });
+    });
+    </script>
+</body>
+
+</html>

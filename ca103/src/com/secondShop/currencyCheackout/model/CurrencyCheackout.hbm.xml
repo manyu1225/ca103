@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.secondShop.currencyCheackout.model.CurrencyCheackoutVO" table="currency_Cheackout" >
+        
+        <id name="cheackoutId" column="cheackout_Id">
+        
+            <generator class="sequence">
+                <param name="cheackout_seq">cheackout_seq</param>
+            </generator>  
+        </id>
+   
+        <property name="memId" column="mem_Id" />
+        <property name="currencyId" column="currency_Id" />
+        <!-- <property name="cheackoutId" column="cheackout_Id" /> -->
+        <property name="cheackoutBalance" column="cheackout_Balance" />
+        <property name="cheackoutDate" column="cheackout_Date" />
+        <property name="cheackoutStatus" column="cheackout_status" />
+        
+    </class>
+</hibernate-mapping>

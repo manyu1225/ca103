@@ -1,0 +1,481 @@
+<style type="text/css">
+
+
+
+
+.Leaderboard {
+    margin-bottom: 10px;
+}
+
+.CarouselPadding {
+    padding: 2% 2% 2px 2%
+}
+
+.row {
+    width: 100%;
+    margin-top: 10px
+}
+
+.paddingTop {
+    padding-top: 15px
+}
+
+.topic {
+    height: 100%
+}
+
+.bg-light {
+    background: rgb(148,216,222); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(148,216,222,1) 0%, rgba(117,201,209,1) 51%, rgba(73,181,191,1) 81%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(148,216,222,1) 0%,rgba(117,201,209,1) 51%,rgba(73,181,191,1) 81%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(148,216,222,1) 0%,rgba(117,201,209,1) 51%,rgba(73,181,191,1) 81%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94d8de', endColorstr='#49b5bf',GradientType=0 );
+
+}
+
+.navbar-trans{
+    background: transparent;
+}
+
+#navbarText {
+    font-family: 敺株�迤暺��;
+}
+
+.card2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.card-header {
+    background-color: #55BFE0;
+    border: 2px;
+    color: #ffff;
+}
+
+.carousel-inner {
+    : 600px
+}
+
+.card-title {}
+
+.card-img {
+    width: 100%;
+}
+
+.nav-link {
+    color: #ffff;
+    font-style:
+}
+
+.main {
+    padding-bottom: 100px;
+    /* Height of the footer */
+}
+
+
+/*
+    #nav{
+        border: 3px;
+        border-color:#ffff;
+
+    }
+    */
+
+    .container {
+        margin-top: 60px;
+    }
+
+    .formContent {
+        box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, .09);
+    }
+
+    .formContent2 {
+        box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, .09);
+        background-color: rgba(0, 0, 0, .125);
+        border: 2px;
+    }
+
+    .bd-footer {
+        margin-top: 30px;
+        background-color: #55BFE0;
+        bottom: 0px
+    }
+
+    .footer__copyright {
+        line-height: 70px;
+        color: #fff
+    }
+
+    .dlk-radio input[type="radio"],
+    .dlk-radio input[type="checkbox"] {
+        margin-left: -99999px;
+        display: none;
+    }
+
+    .dlk-radio input[type="radio"]+.fa,
+    .dlk-radio input[type="checkbox"]+.fa {
+        opacity: 0.15
+    }
+
+    .dlk-radio input[type="radio"]:checked+.fa,
+    .dlk-radio input[type="checkbox"]:checked+.fa {
+        opacity: 1
+    }
+
+    /*==================*/
+
+    /* The switch - the box around the slider 撘鞈潸眺撱�����*/
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        float: right;
+    }
+
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        display: none;
+    }
+
+
+    /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input.default:checked+.slider {
+        background-color: #444;
+    }
+    input.primary:checked+.slider {
+        background-color: #2196F3;
+    }
+    input.success:checked+.slider {
+        background-color: #8bc34a;
+    }
+    input.info:checked+.slider {
+        background-color: #3de0f5;
+    }
+    input.warning:checked+.slider {
+        background-color: #FFC107;
+    }
+    input.danger:checked+.slider {
+        background-color: #f44336;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+
+
+
+    /**/
+
+    /* The switch - the box around the slider 撘鞈潸眺撱����� */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        float: right;
+    }
+
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        display: none;
+    }
+
+
+    /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input.default:checked+.slider {
+        background-color: #444;
+    }
+    input.primary:checked+.slider {
+        background-color: #2196F3;
+    }
+    input.success:checked+.slider {
+        background-color: #8bc34a;
+    }
+    input.info:checked+.slider {
+        background-color: #3de0f5;
+    }
+    input.warning:checked+.slider {
+        background-color: #FFC107;
+    }
+    input.danger:checked+.slider {
+        background-color: #f44336;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+
+
+
+    .carousel-item-title{
+
+        font-family: 敺株�迤暺��;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .carousel-item-subtitle{
+        font-family: 敺株�迤暺��;
+        font-size: 20px;
+    }
+    .mem_img{
+
+        border-radius: 50%;
+
+    }
+/*
+    #homepage_commun_btn_size{
+transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    position: absolute;
+
+
+
+
+    }*/
+
+
+    #group_bg_image{
+
+        background-image: url("../../img/map_pic6.jpg");
+
+
+    }
+
+
+    .homePage_font_large{
+
+       font-family: 敺株�迤暺��;
+       font-size: 50px;
+       font-weight: bold;
+
+   }
+
+   .homePage_font_md{
+
+       font-family: 敺株�迤暺��;
+       font-size: 25px;
+/*       font-weight: bold;
+*/
+}
+
+
+
+
+/*footer starts here*/
+
+.bg-primary {
+   background-color: #000 !important;
+}
+
+.bg-circle
+{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  padding: 14px 4px;
+  color: #ececec;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.bg-circle-outline
+{
+  width: 50px;
+  height: 50px;
+  color:smoke;
+  padding: 8px 2px;
+  border: 2px solid;
+  border-color: smoke;
+  border-radius: 50%;
+}
+
+
+.bg-circle a, a:hover, .media a:focus
+{
+  text-decoration: none !important;
+  outline: none;
+  color: #ececec;
+}
+.bg-circle-outline a, a:hover, .media a:focus
+{
+  text-decoration: none !important;
+  outline: none;
+  color: #ececec;
+}
+
+
+/**/
+
+/*motion wall starts*/
+ .amos{
+    width: 1255px;
+    height: 480px;
+    background-color:#f00;
+  }
+
+  .item{
+    width: 300px;
+    height: 215px;
+    margin: 10px;
+    background-color:#F0FFFF;
+    color: #000000;
+    font-size: 100px;
+  }
+
+
+
+  .item1{
+    width: 600px;
+    height: 450px;
+  }
+
+/*random row*/
+
+.random-row{
+
+width: 1255px;
+
+
+}
+
+
+
+/*main classification*/
+
+.motion-wall{
+
+
+    min-width: 960px;
+
+
+}
+
+
+.navbar {
+    box-shadow: 0 5px 5px -2px rgba(0,0,0,.2);
+}
+
+
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+
+/*navbar-height*/
+ .navbar {
+  min-height: 80px;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+}
+
+/*navbar-height emds*/
+
+
+
+
+
+
+/*footer ends here*/
+
+</style>

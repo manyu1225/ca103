@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.secondShop.productBidding.model.BiddingVO" table="bidding" >
+        
+        <id name="biddingId" column="bidding_id">
+            <generator class="sequence">
+                <param name="bidding_seq">bidding_seq</param>
+            </generator>  
+        </id>
+ 
+        <property name="memId" column="mem_id" />
+        <property name="biddingPrice" column="bidding_price" />
+        <property name="biddingDate" column="bidding_date" />
+        
+        <many-to-one name="ProductVO" class="com.secondShop.product.model.ProductVO" lazy="false">
+            <column name="product_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping> 

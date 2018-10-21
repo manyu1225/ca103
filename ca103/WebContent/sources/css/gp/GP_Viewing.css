@@ -1,0 +1,389 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto', '嚙踝蕭謕蕭���蕭嚙踐�蕭�����雓�嚙踝蕭謢察��嚙踐�嚙踝蕭謕蕭��嚙踝�蕭�������雓�鞊莎�揭', sans-serif;
+    		    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  		background-attachment: fixed;
+    background-image: url(/CA103G2/sources/img/Route/bg13.jpg);
+    
+}
+
+.paddingTop{
+	margin-top: 100px;
+}
+.btn:not(:disabled):not(.disabled){
+	color:#fff;
+}
+
+.btn-info{
+	color:#010 !important;
+	border-color:#17c;
+	background-color:white;
+}
+
+.btn-info:hover{
+	color:#010;
+	border-color:#17c;
+	background-color:#ddd;
+}
+
+
+a:not([href]):not([tabindex]):hover{
+	color:white;
+}
+a{
+	font-weight:700;
+}
+/*���揚�������掠��蕭豲蕭謅��嚙踝�蕭嚙踐ar*/
+.hole_block {
+	opacity:0.93;
+    background-color: #fff;
+    padding: 18px;
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+}
+/*嚙踐�蕭嚙踐��ab嚙踝蕭豲蕭謏��雓���蕭*/
+.tab li {
+    display: inline-block;
+
+}
+/*tab���嚙踝蕭��頩�gin*/
+#pills-tab {
+/*    margin-top: 10px;*/
+}
+/*tab���嚙踝蕭��頩螂嚙踝�蕭謏��*/
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: #fff;
+    color: #007bff;
+    border-bottom: solid 4px #66b3ff;
+    border-bottom: 50%;
+}
+/*tab���嚙踝蕭��頩螂嚙踝�蕭謏��*/
+.nav-pills > li > a {
+    color: #a0a0a0;
+}
+/* ���蕭�����頩�嚙踝蕭��雓����嚙踝蕭��嚙踝蕭��蕭謚殷��不���蕭 */
+.row{
+/*     width: 100%; */
+}
+.imgGP{
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: url(../img/travel2.jpg);
+    width: 50%;
+    background-repeat:no-repeat;
+    padding-top: 50%;
+    background-position:center;
+    background-size:cover;
+}
+.desc div{
+    margin-bottom: 3px;
+
+}
+.desc .icon{
+    
+}
+
+/*嚙踝�蕭嚙踐江擃∴蕭嚙踐�*/
+.photoViewing{
+/*嚙踐�蕭嚙踐�雓�嚙踝蕭謚穿蕭謖�嚙踝�������蕭謕��*/
+    display: inline-block;
+    width:100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    background-position: center;
+    vertical-align: top;
+    margin-right:10px;
+}
+
+}
+/*嚙踝蕭蹎剁蕭謜嚙踐rofile������嚙踝���*/
+.profileViewing>div{
+    margin-top: 20px;
+    
+}
+/*���蕭謚穿蕭謖�嚙踝����蕭蹐嚙踝���蕭謕�蕭嚙踐童曌��蕭謕蕭�����蕭����蕭*/
+.inlineBlock{
+    display: inline-block;
+}
+.btnRowFixed{
+	z-index:1;
+    position:fixed;
+    top:20px;
+}
+.returnBtnFixed{
+	z-index:1;
+    position:fixed;
+    top:30px;
+}
+
+
+
+/* ���蕭謚渲嚙踝蕭謖嚙踐���雓Ｚ�嚙踝蕭�� */
+.title{
+    font-weight: bolder;
+    text-align: center;
+}  
+
+.updateInfo{
+    overflow-y: scroll;
+    width: 100%;
+    height: 85%;    
+}
+.submit{
+    position: absolute;
+    left: calc(50% - 60px);
+    bottom: 5px;
+}
+#updatelightBox{
+    display:block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(66,66,66,.8);
+    z-index: 10;
+}
+#updatePage{
+    position: absolute;
+    top:30px;
+    left:15%;
+    background-color: white;
+    height: 80%;
+    width: 70%;
+}
+.inline-Block{
+    display: inline-block;
+}
+/* ���蕭謚渲嚙踝蕭謖嚙踐���雓Ｙ飭嚙踝�狗��蕭 */
+.error{
+	color:red;
+	display:none;
+}
+
+
+
+
+
+
+
+
+
+/* ���雓����CSS */
+.box {
+    height: 600px;
+    width: 100%;
+    background-color: #aaf;
+}
+
+.container-fluid {
+    margin-bottom: 500px;
+}
+
+.bg {
+    width: 515px;
+    height: auto;
+    z-index:-1;
+/*     background-color: #eee; */
+}
+
+/* 嚙踝蕭豲�掠嚙�4���蕭賹���嚙踐�蕭謒��雓�嚙踝��蕭 */
+.imgCmtInputer{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.cmtInput{
+    display: block;
+    height:30px;
+/*            �����蕭30px���粥嚙踐扒嚙踝蕭��嚙踐�蕭謓啣����蕭*/
+    width:385px;
+/*            border-radius: 20px;*/
+}
+.cmtInputBox{
+    display: inline-block;
+}
+
+.cmtInputSubmit{
+    font-size: 5px;
+    margin-top: 5px;
+    margin-left: 80%;
+}
+
+
+
+
+
+
+
+
+.imgCommenter {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.commenter {
+    /*display: inline-block;*/
+    /*vertical-align:50%;*/
+    height: 20px;
+}
+.commentBox {
+    display: inline-block;
+    font-size: 18px;
+/*     margin-bottom: 15px; */
+
+}
+.commentTextBox {
+	word-break:break-all;
+    width: 415px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 24px;
+    height: 50px;
+/*            margin-bottom: 0;*/
+    
+}
+
+.commentTextBox.visible {
+    overflow: visible;
+    height: auto;
+    -webkit-line-clamp: inherit;
+}
+
+.expandComment{
+    position:relative;
+/*            left:400px;*/
+}
+
+.smallText{
+    font-size: 10px;
+    color: gray;
+    margin-left: 10px;
+}
+
+
+.imgReplier {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 100px;
+    margin-right: 15px;
+}
+.replier{
+    height: 16px;    
+}
+
+
+.replyBox{
+    display: inline-block;
+    font-size: 14px;
+}
+.replyRow{
+/*            margin-bottom: 10px;*/
+}
+
+.imgRepInputer{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 100px;
+    margin-right: 15px;
+}
+
+.replyTextBox{
+	word-break:break-all;
+    width: 350px;
+}
+
+.repInput{
+    display: block;
+    height:30px;
+/*     嚙踝蕭謚喉蕭����蕭30���嚙踝蕭蹎�蕭嚙踐�嚙踝�嚙踝蕭��嚙踐�蕭謓啣����蕭 */
+    width:320px;
+    border-radius: 20px;
+}
+
+.repInputBox{
+    display: inline-block;
+}
+
+.repInputSubmit{
+    font-size: 5px;
+    margin-top: 5px;
+    margin-left: 80%;
+}
+.msgBox{
+	margin-bottom:20px;
+}
+
+.msgBox a:not([href]):not([tabindex]) {
+    color: #3753df;
+}
+
+.msgBox a:not([href]):not([tabindex]):hover {
+    z-index: 100;
+    color: #3753df;
+    cursor: pointer;
+}
+
+#c1{
+	width:80px;
+}
+
+/* ��銵冽 */
+.table{
+	width:200%;
+	max-width:150%;
+}
+
+.table img{
+	width:70px;
+	height:70px;
+	border-radius:50%;
+	margin:5px;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 0px;
+}
+.table th{
+    vertical-align: middle;
+    padding: 0px;
+}
+
+#gpRepSnackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#gpRepSnackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+   However, delay the fade out process for 2.5 seconds */
+   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}

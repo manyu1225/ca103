@@ -1,0 +1,33 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%  int rowsPerPageTwo = 6;  //每頁的筆數    
+    int rowNumberTwo=0;      //總筆數
+    int pageNumberTwo=0;     //總頁數      
+    int whichPageTwo=1;      //第幾頁
+    int pageIndexArrayTwo[]=null;
+    int pageIndexTwo=0; 
+%>
+
+<%  
+    rowNumberTwo=listProduct2.size();
+    if (rowNumberTwo%rowsPerPageTwo !=0)
+         pageNumberTwo=rowNumberTwo/rowsPerPageTwo + 1;
+    else pageNumberTwo=rowNumberTwo/rowsPerPageTwo;    
+
+    pageIndexArrayTwo=new int[pageNumberTwo];
+    for (int i=1 ; i<=pageIndexArrayTwo.length ; i++)
+         pageIndexArrayTwo[i-1]=i*rowsPerPageTwo-rowsPerPageTwo;
+%>
+
+<%  try {
+       whichPageTwo = Integer.parseInt(request.getParameter("whichPageTwo"));
+       pageIndexTwo=pageIndexArrayTwo[whichPageTwo-1];
+    } catch (NumberFormatException e) { //第一次執行的時候
+       whichPageTwo=1;
+       pageIndexTwo=0;
+    } catch (ArrayIndexOutOfBoundsException e) { //總頁數之外的錯誤頁數
+         if (pageNumberTwo>0){
+              whichPageTwo=pageNumberTwo;
+              pageIndexTwo=pageIndexArrayTwo[pageNumberTwo-1];
+         }
+    } 
+%>

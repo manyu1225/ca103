@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.secondShop.productReport.model.ProductReportVO" table="product_report" >
+        
+        <id name="reportId" column="report_id">
+            <generator class="sequence">
+                <param name="product_report_seq">product_report_seq</param>
+            </generator>  
+        </id>
+ 
+        <property name="memId" column="mem_id" />
+        <property name="reportDate" column="report_date" />
+        <property name="reportStatus" column="report_status" />
+       	<property name="reportDetailed" column="report_detail" />
+        <property name="productId" column="product_id" />
+        	
+<!--         <many-to-one name="ProductVO" class="com.secondShop.product.model.ProductVO" lazy="false">
+            <column name="product_id" />
+        </many-to-one> -->
+    </class>
+</hibernate-mapping> 

@@ -1,0 +1,47 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="<%=request.getContextPath()%>/sources/icon/secondShop/bicycle-nav.png"> 
+      <label style="font-size: 1.7rem;">自轉車管理後台</label></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="<%=request.getContextPath()%>/BackHomePage.jsp">Home <span class="sr-only">Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">自轉車平台</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+      
+<%
+    if((request.getSession().getAttribute("empVO")) == null){
+%>
+
+<a  href="<%=request.getContextPath()%>/back-end/emp/EmpLogin.jsp"><i class="mr-2 fas fa-user-alt"><label class="mr-2">登入</label></i>
+</a>
+        
+<%
+	}else if((request.getSession().getAttribute("empVO")) != null){
+%>
+        <a  href="#"><i class="mr-2 fas fa-user-alt"></i>
+          <label class="mr-2">登入員工：${empVO.emp_lastname}${empVO.emp_firstname}&nbsp&nbsp&nbsp員工編號：${empVO.emp_id}&nbsp&nbsp&nbsp職位：${empVO.emp_pr}</label>
+        </a>
+        <a  href="<%=request.getContextPath()%>/back-end/emp/emp.do?action=logout&emp_id=${empVO.emp_id}">
+          <i class="mr-2 fas fa-sign-out-alt"></i>
+          <label class="mr-2">登出</label>
+        </a>
+        
+<%
+        }
+%>    
+      
+      
+      </span>
+    </div>
+  </nav>

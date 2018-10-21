@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="cleartype" content="on">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=1, maximum-scale=5.0, user-scalable=yes">
+		<title>
+		自行車筆記 | tw.cycling.biji.co		</title>
+		<meta name="description" content="歡迎和我們一起來騎自行車！這裡有賽事、照片、知識、新聞、討論，自行車筆記-你最好的自行車夥伴。">
+		<!-- facebook-setting -->
+ 		
+
+ 		<link rel="icon" href="http://tw.cycling.biji.co/static/images/default_img/favicon.ico" type="image/x-icon">
+		<link href="/static/css/computer/reset.css" rel="stylesheet" media="all">
+		<link href="/static/css/computer/layout.css" rel="stylesheet" media="all">
+		<link href="/static/css/computer/notelib.css" rel="stylesheet" media="all">
+		<link href="/static/css/computer/computer.css?v=180725" rel="stylesheet" media="all">
+		<link href="/static/css/computer/ad.css" rel="stylesheet" media="all">
+        <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		<link href="/static/css/computer/simple-line-icons.css" rel="stylesheet" media="all">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="/static/js/computer/jquery.lazyload.min.js"></script>
+		<script src="/static/js/computer/jquery.cookie.js"></script>
+		<script src="/static/js/global.js"></script>
+		<script src="/static/js/banner.js" type="text/javascript"></script>
+        <script src="http://board.biji.co//static/js/central-sdk.1.js"></script>
+		<!-- Start Alexa Certify Javascript -->
+        <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=iZrXj1acFH00y6" style="display:none" height="1" width="1" alt="" /></noscript>
+        <!-- End Alexa Certify Javascript -->
+		<!-- Begin comScore Tag -->
+		<script>
+		  var _comscore = _comscore || [];
+		  _comscore.push({ c1: "2", c2: "22226345" });
+		  (function() {
+		    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+		    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+		    el.parentNode.insertBefore(s, el);
+		  })();
+		</script>
+		<noscript>
+		  <img src="http://b.scorecardresearch.com/p?c1=2&c2=22226345&cv=2.0&cj=1" />
+		</noscript>
+		<!-- End comScore Tag -->
+		<!-- Google's Sitelinks Search Box -->
+		<script type="application/ld+json">
+			{
+			   "@context": "http://schema.org",
+			   "@type": "WebSite",
+			   "url": "tw.cycling.biji.co",
+			   "potentialAction": {
+			     "@type": "SearchAction",
+			     "target": "https://query.example-petstore.com/search?q={search_term_string}",
+			     "query-input": "required name=search_term_string"
+			   }
+			}
+		</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-19791415-24', 'auto');
+                        ga('send', 'pageview');
+
+			document.domain = "biji.co";
+			BOARD_SITE ='http://board.biji.co/';
+		    		        is_login = 'false';
+		    		</script>
+	</head>
+	<body>
+				<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.7&appId=230626213615077";//264917127026449";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
+				<div class="prograss-bar"></div>
+		<header class="header">
+			<div class="header-inner">
+				<div class="header-top">
+					<h1 class="branding">
+						<a href="/" title="自行車筆記">
+							<img src="/static/images/default_img/branding.svg" alt="自行車筆記">
+							<p class="hide-text">自行車筆記</p>
+						</a>
+					</h1>
+										     <a href="http://board.biji.co//member/login/?next=http%3A%2F%2Ftw.cycling.biji.co%2Findex.php%3Fq%3Dreview" class="login_btn g-member-text">登入</a>
+										<div id="biji_central_login" class="g-member"></div>
+                    <a href="/index.php?q=member&act=form_review" class="shortcut-btn"><i class="fa fa-pencil"></i><div>寫文章</div></a>
+<a href="javascript:;" class="shortcut-btn upload_album_btn"><i class="fa fa-camera"></i><div>傳照片</div></a>
+<a href="/index.php?q=member&act=form_video" class="shortcut-btn"><i class="fa fa-youtube-play"></i><div>傳影片</div></a>
+<script>
+$(document).off('click','.upload_album_btn_office').on('click','.upload_album_btn_office',function (e){
+	var competition_id = $(this).attr('data-id');
+	var competition_date = $(this).attr('data-date');
+	var competition_type = $(this).attr('data-type');
+
+	$.ajax({
+		url: '/index.php?pop=pop&func=album&fename=album_upload_generate_file',
+		type: 'POST',
+		data: {'competition_id':competition_id , 'competition_date':competition_date,'competition_type':competition_type},
+		success: function (msg){
+			$('body').css('overflow','hidden');
+			$('#index_pop_frame').html(msg);
+			$('#index_pop_background').show();
+			$('#index_pop_frame').append('<div class="func_cancel_bgclose is-hidden"></div>'); //取消點背景關閉
+		}
+	});
+});
+</script>
+					<div class="g-search">
+						<input id="g_search_input" class="g-search-input" type="text" name="" tabindex="1" role="" title="請輸入關鍵字">
+						<a class="g-search-btn"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<nav class="g-nav">
+				<ul class="g-nav-inner">
+										<li class="g-nav-item ">
+						<a href="/index.php?q=competition" >賽事</a>
+						<div class="g-subNav">
+	<ul class="g-subNav-inner">
+		<li class="g-subNav-item"><a href="/index.php?q=competition&location=home">國內</a></li>
+		<li class="g-subNav-item"><a href="/index.php?q=competition&location=oversea">國外</a></li>
+	</ul>
+</div>
+
+
+
+
+					</li>
+										<li class="g-nav-item ">
+						<a href="/index.php?q=album" >相簿影音</a>
+						<div class="g-subNav">
+	<ul class="g-subNav-inner">
+		<li class="g-subNav-item"><a href="/index.php?q=album">賽事相簿</a></li>
+		<li class="g-subNav-item"><a href="/index.php?q=video&act=list">自行車好影片</a></li>
+	</ul>
+</div>
+					</li>
+										<li class="g-nav-item ">
+						<a href="/index.php?q=news" >文章</a>
+						<div class="g-subNav"> 
+	<ul class="g-subNav-inner">
+			<li class="g-subNav-item"><a href="/index.php?q=news&label=9">知識</a></li>
+			<li class="g-subNav-item"><a href="/index.php?q=news&label=6">新聞</a></li>
+			<li class="g-subNav-item"><a href="/index.php?q=news&label=3">產品</a></li>
+			<li class="g-subNav-item"><a href="/index.php?q=news&label=10">賽事</a></li>
+			<li class="g-subNav-item"><a href="/index.php?q=news&label=4">心得</a></li>
+			<li class="g-subNav-item"><a href="/index.php?q=news&label=7">路線</a></li>
+			<li class="g-subNav-item"><a href='/index.php?q=topic' >主題</a></li>
+	</ul>
+</div>
+					</li>
+										<li class="g-nav-item ">
+						<a href="/index.php?q=route" >路線</a>
+						<div class="g-subNav">
+	<ul class="g-subNav-inner">
+				<li class="g-subNav-item"><a href="/index.php?q=route&type=1">平路</a></li>
+				<li class="g-subNav-item"><a href="/index.php?q=route&type=2">平路＋爬坡</a></li>
+				<li class="g-subNav-item"><a href="/index.php?q=route&type=3">爬坡</a></li>
+				<li class="g-subNav-item"><a href="/index.php?q=route&type=4">越野</a></li>
+				<li class="g-subNav-item"><a href="/index.php?q=route&type=5">自行車道</a></li>
+			
+	</ul>
+</div>
+					</li>
+										<li class="g-nav-item">
+						<a href="/index.php?q=topic">主題</a>
+					</li>
+					<li class="g-nav-item">
+						<a href="/index.php?q=topic&act=article&specialid=30">達人</a>
+					</li>
+					<li class="g-nav-item">
+						<a href="/index.php?q=review">網友發表</a>
+					</li>
+					<li class="g-nav-item">
+						<a href="/index.php?q=forum">討論區</a>
+					</li>
+					<li class="g-nav-item">
+						<a href="/index.php?q=buy">購物</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div id="wrap" class="wrap">
+					<div class="breadcrumbs col-c12">
+			<a href='/'>首頁</a> 
+			<i class="fa fa-angle-right"></i><a href="/index.php?q=news">文章</a><i class="fa fa-angle-right"></i><span>網友發表</span>		</div>
+			
+	<script src="/static/js/computer/masonry-docs.min.js"></script>
+<div class="review-list-page">
+	
+	<!--div class="filter-wrap col-c12">
+		<ul class="type-filter">
+								<li class="filter-item "><a href="/index.php?q=review&cate=other&order=new">網友發表</a></li>
+					</ul>
+	</div-->
+	
+		
+		<ul class="card-list--naked review-list row" id='masonry_container'>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27066&subtitle=%E8%BF%BD%E9%A2%A8%E9%A8%8E%E4%B9%98%E7%9A%84%E8%81%B0%E6%98%8E%E5%B9%AB%E6%89%8B-%E8%B7%AF%E7%B7%9A%E8%A6%8F%E5%8A%83%E5%8F%8A%E6%99%BA%E6%85%A7%E6%99%AF%E9%BB%9E%E5%B0%8E%E8%88%AA" title="追風騎乘的聰明幫手-路線規劃及智慧景點導航" data-original="http://cdntwrunning.biji.co/300_0b800418ac4c7653240732df0064a3bf.png">
+				<img src="http://cdntwrunning.biji.co/300_0b800418ac4c7653240732df0064a3bf.png" alt="追風騎乘的聰明幫手-路線規劃及智慧景點導航" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27066&subtitle=%E8%BF%BD%E9%A2%A8%E9%A8%8E%E4%B9%98%E7%9A%84%E8%81%B0%E6%98%8E%E5%B9%AB%E6%89%8B-%E8%B7%AF%E7%B7%9A%E8%A6%8F%E5%8A%83%E5%8F%8A%E6%99%BA%E6%85%A7%E6%99%AF%E9%BB%9E%E5%B0%8E%E8%88%AA">追風騎乘的聰明幫手-路線規劃及智慧景點導航</a></h3>
+				<p class="teaser">
+					Hello 大家好，我們是Xplova，專營騎乘與運動相關之IoT產品、服務與平台的台灣品牌。
+之前，為大家介...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=828955" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/108090716812030/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=828955" class="info-item">Xplova愛普瑞</a>
+					<span class="info-item">2018/09/21</span>
+					<span class="info-item"><i class="icon-eye"></i> 19</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27065&subtitle=%E9%A8%8E%E5%96%AE%E8%BB%8A%C3%97%E5%92%8C%E7%89%9B++Mix+Tour+%E6%97%A5%E6%9C%AC%E4%B9%9D%E5%B7%9E%E5%AE%AE%E5%B4%8E" title="騎單車×和牛  Mix Tour 日本九州宮崎" data-original="http://cdntwrunning.biji.co/300_c17a4567150af0fb0f68c08741258fb6.jpg">
+				<img src="http://cdntwrunning.biji.co/300_c17a4567150af0fb0f68c08741258fb6.jpg" alt="騎單車×和牛  Mix Tour 日本九州宮崎" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27065&subtitle=%E9%A8%8E%E5%96%AE%E8%BB%8A%C3%97%E5%92%8C%E7%89%9B++Mix+Tour+%E6%97%A5%E6%9C%AC%E4%B9%9D%E5%B7%9E%E5%AE%AE%E5%B4%8E">騎單車×和牛  Mix Tour 日本九州宮崎</a></h3>
+				<p class="teaser">
+					主題是?
+騎單車在日本九州宮崎的路線 ? ? ? ? ? ?? ? ? ? ? ? 當地美食 ?宮崎牛肉 ，宮...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=683497" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/191881531332112/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=683497" class="info-item">SPORTS ENTRY～日本巧克力～</a>
+					<span class="info-item">2018/09/11</span>
+					<span class="info-item"><i class="icon-eye"></i> 25</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27064&subtitle=%E3%80%8EBikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3%E3%80%8F+-+%E5%85%A7%E6%B9%96%E6%B2%B3%E6%BF%B1%E8%87%AA%E8%A1%8C%E8%BB%8A%E9%81%93+x+%E5%8C%97%E6%B5%B7%E5%B2%B8" title="『BikepackingTaiwan 陪你玩台灣』 - 內湖河濱自行車道 x 北海岸" data-original="http://cdntwrunning.biji.co/300_c2bd0c086ec6c4a764715a7b95d6a39c.jpg">
+				<img src="http://cdntwrunning.biji.co/300_c2bd0c086ec6c4a764715a7b95d6a39c.jpg" alt="『BikepackingTaiwan 陪你玩台灣』 - 內湖河濱自行車道 x 北海岸" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27064&subtitle=%E3%80%8EBikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3%E3%80%8F+-+%E5%85%A7%E6%B9%96%E6%B2%B3%E6%BF%B1%E8%87%AA%E8%A1%8C%E8%BB%8A%E9%81%93+x+%E5%8C%97%E6%B5%B7%E5%B2%B8">『BikepackingTaiwan 陪你玩台灣』 - 內湖河濱自行車道 x 北海岸</a></h3>
+				<p class="teaser">
+					第一天
+行經路程：77K
+耗費總時：5 hours
+
+久違的天晴，整個雨季下到我快發霉了，趕緊趁著一天的假期出...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=116460" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/708722919237603/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=116460" class="info-item">張香蕉</a>
+					<span class="info-item">2018/09/08</span>
+					<span class="info-item"><i class="icon-eye"></i> 12</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27063&subtitle=%E3%80%8EBikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3%E3%80%8F+-+%E5%8F%B8%E9%A6%AC%E9%99%90%E6%9E%97%E9%81%93" title="『BikepackingTaiwan 陪你玩台灣』 - 司馬限林道" data-original="http://cdntwrunning.biji.co/300_53092651b31a5514ac4a5aa0f4294b26.jpg">
+				<img src="http://cdntwrunning.biji.co/300_53092651b31a5514ac4a5aa0f4294b26.jpg" alt="『BikepackingTaiwan 陪你玩台灣』 - 司馬限林道" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27063&subtitle=%E3%80%8EBikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3%E3%80%8F+-+%E5%8F%B8%E9%A6%AC%E9%99%90%E6%9E%97%E9%81%93">『BikepackingTaiwan 陪你玩台灣』 - 司馬限林道</a></h3>
+				<p class="teaser">
+					第一天
+騎行距離：29K
+花費時間：8 hours
+
+隨著騎行的次數越來越多，行程慢慢的越來越往中南部跑。這次...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=116460" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/708722919237603/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=116460" class="info-item">張香蕉</a>
+					<span class="info-item">2018/08/30</span>
+					<span class="info-item"><i class="icon-eye"></i> 916</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27062&subtitle=%E3%80%8EBikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3%E3%80%8F+-+%E7%8E%89%E9%87%8C%E6%9E%97%E9%81%93+x+%E7%8E%89%E5%AF%8C%E8%87%AA%E8%A1%8C%E8%BB%8A%E9%81%93" title="『BikepackingTaiwan 陪你玩台灣』 - 玉里林道 x 玉富自行車道" data-original="http://cdntwrunning.biji.co/300_765923580316783186bac61550ee67c2.jpg">
+				<img src="http://cdntwrunning.biji.co/300_765923580316783186bac61550ee67c2.jpg" alt="『BikepackingTaiwan 陪你玩台灣』 - 玉里林道 x 玉富自行車道" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27062&subtitle=%E3%80%8EBikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3%E3%80%8F+-+%E7%8E%89%E9%87%8C%E6%9E%97%E9%81%93+x+%E7%8E%89%E5%AF%8C%E8%87%AA%E8%A1%8C%E8%BB%8A%E9%81%93">『BikepackingTaiwan 陪你玩台灣』 - 玉里林道 x 玉富自行車道</a></h3>
+				<p class="teaser">
+					
+【旅行講座 - Bikepacking人生：關於單車、生活、野外露營】8/28（四）19：00 旬印Anem...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=116460" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/708722919237603/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=116460" class="info-item">張香蕉</a>
+					<span class="info-item">2018/08/21</span>
+					<span class="info-item"><i class="icon-eye"></i> 764</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27061&subtitle=%E3%80%8EBikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3%E3%80%8F+-+%E9%9C%A7%E5%8F%B0%E5%85%AC%E8%B7%AF" title="『BikepackingTaiwan 陪你玩台灣』 - 霧台公路" data-original="http://cdntwrunning.biji.co/300_d36780e99e76fea9672b260b4c66c803.jpg">
+				<img src="http://cdntwrunning.biji.co/300_d36780e99e76fea9672b260b4c66c803.jpg" alt="『BikepackingTaiwan 陪你玩台灣』 - 霧台公路" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27061&subtitle=%E3%80%8EBikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3%E3%80%8F+-+%E9%9C%A7%E5%8F%B0%E5%85%AC%E8%B7%AF">『BikepackingTaiwan 陪你玩台灣』 - 霧台公路</a></h3>
+				<p class="teaser">
+					網誌好讀版：https://bikepackingtaiwan.com/bikepacking20
+
+第一天
+...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=116460" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/708722919237603/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=116460" class="info-item">張香蕉</a>
+					<span class="info-item">2018/08/12</span>
+					<span class="info-item"><i class="icon-eye"></i> 1,273</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27060&subtitle=BikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3+-+%E6%97%A5%E6%9C%88%E6%BD%AD+x+%E8%BB%8A%E5%9F%95" title="BikepackingTaiwan 陪你玩台灣 - 日月潭 x 車埕" data-original="http://cdntwrunning.biji.co/300_91eea7547b8ccc243bd0516f16036223.jpg">
+				<img src="http://cdntwrunning.biji.co/300_91eea7547b8ccc243bd0516f16036223.jpg" alt="BikepackingTaiwan 陪你玩台灣 - 日月潭 x 車埕" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27060&subtitle=BikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3+-+%E6%97%A5%E6%9C%88%E6%BD%AD+x+%E8%BB%8A%E5%9F%95">BikepackingTaiwan 陪你玩台灣 - 日月潭 x 車埕</a></h3>
+				<p class="teaser">
+					第一天
+行經路程：57K
+耗費總時：6 hours
+路線圖：https://youtu.be/KUx0kOOG...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=116460" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/708722919237603/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=116460" class="info-item">張香蕉</a>
+					<span class="info-item">2018/08/07</span>
+					<span class="info-item"><i class="icon-eye"></i> 984</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27059&subtitle=%E6%97%A5%E6%9C%AC%E9%9D%9E%E5%B8%B8%E6%9C%89%E5%90%8D%E7%9A%84%E5%96%AE%E8%BB%8A%E6%B4%BB%E5%8B%95+%E6%98%8E%E5%A4%A9%E5%B0%B1%E9%96%8B%E6%94%BE%E5%A0%B1%E5%90%8D%EF%BC%81%EF%BC%81%E6%B2%96%E7%B9%A9" title="日本非常有名的單車活動 明天就開放報名！！沖繩" data-original="http://cdntwrunning.biji.co/300_6251baff8b5584d1172e2f4c91b720e3.jpg">
+				<img src="http://cdntwrunning.biji.co/300_6251baff8b5584d1172e2f4c91b720e3.jpg" alt="日本非常有名的單車活動 明天就開放報名！！沖繩" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27059&subtitle=%E6%97%A5%E6%9C%AC%E9%9D%9E%E5%B8%B8%E6%9C%89%E5%90%8D%E7%9A%84%E5%96%AE%E8%BB%8A%E6%B4%BB%E5%8B%95+%E6%98%8E%E5%A4%A9%E5%B0%B1%E9%96%8B%E6%94%BE%E5%A0%B1%E5%90%8D%EF%BC%81%EF%BC%81%E6%B2%96%E7%B9%A9">日本非常有名的單車活動 明天就開放報名！！沖繩</a></h3>
+				<p class="teaser">
+					傘傘傘_日本非常有名的單車活動_傘傘傘
+第30屆「Tour de Okinawa2018」
+活動 地點是 沖繩...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=683497" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/191881531332112/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=683497" class="info-item">SPORTS ENTRY～日本巧克力～</a>
+					<span class="info-item">2018/07/31</span>
+					<span class="info-item"><i class="icon-eye"></i> 61</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27058&subtitle=BikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3+-+%E5%8C%97%E6%B8%AF%E6%BA%AA%E5%B3%BD%E8%B0%B7" title="BikepackingTaiwan 陪你玩台灣 - 北港溪峽谷" data-original="http://cdntwrunning.biji.co/300_c3510cba3dce1613e073a1cb2ed20273.jpg">
+				<img src="http://cdntwrunning.biji.co/300_c3510cba3dce1613e073a1cb2ed20273.jpg" alt="BikepackingTaiwan 陪你玩台灣 - 北港溪峽谷" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27058&subtitle=BikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3+-+%E5%8C%97%E6%B8%AF%E6%BA%AA%E5%B3%BD%E8%B0%B7">BikepackingTaiwan 陪你玩台灣 - 北港溪峽谷</a></h3>
+				<p class="teaser">
+					精彩剪輯：https://youtu.be/t53ZC1X-wAc
+
+第一天
+行經路程：44K (單趟)
+耗費...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=116460" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/708722919237603/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=116460" class="info-item">張香蕉</a>
+					<span class="info-item">2018/07/31</span>
+					<span class="info-item"><i class="icon-eye"></i> 568</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 1</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27057&subtitle=%E9%A8%8E%E8%BB%8A%E5%B0%8F%E5%A5%B3%E5%AD%A9%E9%95%B7%E5%A4%A7%E4%BA%86%E4%B9%8B%E6%88%80%E6%88%80197" title="騎車小女孩長大了之戀戀197" data-original="http://cdntwrunning.biji.co/300_c0b90ba2b454206731e9caf3650adf52.jpg">
+				<img src="http://cdntwrunning.biji.co/300_c0b90ba2b454206731e9caf3650adf52.jpg" alt="騎車小女孩長大了之戀戀197" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27057&subtitle=%E9%A8%8E%E8%BB%8A%E5%B0%8F%E5%A5%B3%E5%AD%A9%E9%95%B7%E5%A4%A7%E4%BA%86%E4%B9%8B%E6%88%80%E6%88%80197">騎車小女孩長大了之戀戀197</a></h3>
+				<p class="teaser">
+					2017年第九屆的戀戀197，不知死活的騎車小女孩參加了100公里的救護騎士，沒想到毒辣的太陽壓垮了我，不甘心...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=40014" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/1846310038/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=40014" class="info-item">許惠雯</a>
+					<span class="info-item">2018/07/28</span>
+					<span class="info-item"><i class="icon-eye"></i> 1,180</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 1</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27056&subtitle=BikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3+-+%E5%9D%AA%E6%9E%97%E6%9E%97%E9%81%93+x+%E7%B7%9A%E6%B5%B8%E6%9E%97%E9%81%93" title="BikepackingTaiwan 陪你玩台灣 - 坪林林道 x 線浸林道" data-original="http://cdntwrunning.biji.co/300_9e883e7390137cf35df877538f6e0172.jpg">
+				<img src="http://cdntwrunning.biji.co/300_9e883e7390137cf35df877538f6e0172.jpg" alt="BikepackingTaiwan 陪你玩台灣 - 坪林林道 x 線浸林道" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27056&subtitle=BikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3+-+%E5%9D%AA%E6%9E%97%E6%9E%97%E9%81%93+x+%E7%B7%9A%E6%B5%B8%E6%9E%97%E9%81%93">BikepackingTaiwan 陪你玩台灣 - 坪林林道 x 線浸林道</a></h3>
+				<p class="teaser">
+					精彩剪輯：https://youtu.be/D2GkA9Rdlko
+
+第一天
+行經路程：21K
+耗費總時：3 ...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=116460" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/708722919237603/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=116460" class="info-item">張香蕉</a>
+					<span class="info-item">2018/07/23</span>
+					<span class="info-item"><i class="icon-eye"></i> 416</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27055&subtitle=2018%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%92%B0%E5%B3%B6%E8%A1%8C---%E9%80%99%E6%AC%A1%E4%B8%8D%E7%92%B0%E5%8F%B0%EF%BC%8C%E9%A8%8E%E5%8E%BB%E7%92%B0%E6%B2%96%E7%B9%A9" title="2018第五次環島行---這次不環台，騎去環沖繩" data-original="http://cdntwrunning.biji.co/300_020f816ae722c67ef80dbafd8340340e.jpg">
+				<img src="http://cdntwrunning.biji.co/300_020f816ae722c67ef80dbafd8340340e.jpg" alt="2018第五次環島行---這次不環台，騎去環沖繩" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27055&subtitle=2018%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%92%B0%E5%B3%B6%E8%A1%8C---%E9%80%99%E6%AC%A1%E4%B8%8D%E7%92%B0%E5%8F%B0%EF%BC%8C%E9%A8%8E%E5%8E%BB%E7%92%B0%E6%B2%96%E7%B9%A9">2018第五次環島行---這次不環台，騎去環沖繩</a></h3>
+				<p class="teaser">
+					前情提要：
+　　年初總是我腦波最弱的時刻，既騎花東曙光時被車友推坑參加中央山脈後，自己還興沖沖地去訂機票跟飯店...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=80792" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/100000132260667/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=80792" class="info-item">吳曉興</a>
+					<span class="info-item">2018/07/16</span>
+					<span class="info-item"><i class="icon-eye"></i> 1,666</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27054&subtitle=BikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3+-+%E9%87%91%E5%89%9B%E5%A4%A7%E9%81%93" title="BikepackingTaiwan 陪你玩台灣 - 金剛大道" data-original="http://cdntwrunning.biji.co/300_b528bb966bf4dcd861807c21c99c53da.jpg">
+				<img src="http://cdntwrunning.biji.co/300_b528bb966bf4dcd861807c21c99c53da.jpg" alt="BikepackingTaiwan 陪你玩台灣 - 金剛大道" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27054&subtitle=BikepackingTaiwan+%E9%99%AA%E4%BD%A0%E7%8E%A9%E5%8F%B0%E7%81%A3+-+%E9%87%91%E5%89%9B%E5%A4%A7%E9%81%93">BikepackingTaiwan 陪你玩台灣 - 金剛大道</a></h3>
+				<p class="teaser">
+					精彩剪輯：https://youtu.be/Oi73YlhJvMY
+
+第一天
+行經路程：31K
+耗費總時：2 ...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=116460" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/708722919237603/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=116460" class="info-item">張香蕉</a>
+					<span class="info-item">2018/07/15</span>
+					<span class="info-item"><i class="icon-eye"></i> 1,306</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27053&subtitle=%E3%80%90%E5%96%AE%E8%BB%8A%E9%81%8A%E8%A8%98%E3%80%91%E7%BE%8E%E9%BA%97%E7%9A%84%E5%B7%B4%E6%8B%89%E5%8D%A1%E5%85%AC%E8%B7%AF" title="【單車遊記】美麗的巴拉卡公路" data-original="http://cdntwrunning.biji.co/300_7f0735b66ab9c43b9f8f679ddee8936d.jpg">
+				<img src="http://cdntwrunning.biji.co/300_7f0735b66ab9c43b9f8f679ddee8936d.jpg" alt="【單車遊記】美麗的巴拉卡公路" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27053&subtitle=%E3%80%90%E5%96%AE%E8%BB%8A%E9%81%8A%E8%A8%98%E3%80%91%E7%BE%8E%E9%BA%97%E7%9A%84%E5%B7%B4%E6%8B%89%E5%8D%A1%E5%85%AC%E8%B7%AF">【單車遊記】美麗的巴拉卡公路</a></h3>
+				<p class="teaser">
+					日期: 2018年7月7日
+天氣: 晴
+騎乘距離: 60 公里
+路線: 新北市蘆洲→二重疏洪道自行車道→觀音坑...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=722406" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/1524229167623401/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=722406" class="info-item">林鴻維</a>
+					<span class="info-item">2018/07/09</span>
+					<span class="info-item"><i class="icon-eye"></i> 2,280</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27052&subtitle=%E4%B8%AD%E5%A4%AE%E5%B1%B1%E8%84%88%28%E7%87%92%E8%B3%A3%29%E4%B8%89%E5%A4%A9%E5%90%83%E5%88%B0%E9%A3%BD" title="中央山脈(燒賣)三天吃到飽" data-original="http://cdntwrunning.biji.co/300_a878439b30776e7c0904f8704a3a07ac.jpg">
+				<img src="http://cdntwrunning.biji.co/300_a878439b30776e7c0904f8704a3a07ac.jpg" alt="中央山脈(燒賣)三天吃到飽" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27052&subtitle=%E4%B8%AD%E5%A4%AE%E5%B1%B1%E8%84%88%28%E7%87%92%E8%B3%A3%29%E4%B8%89%E5%A4%A9%E5%90%83%E5%88%B0%E9%A3%BD">中央山脈(燒賣)三天吃到飽</a></h3>
+				<p class="teaser">
+					前情提要：
+還記得今年一月正在和隊友力戰超Ｇ八曙光花東時，車友就提到有個很好吃的中央燒賣全餐，力推我一定要參加...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=80792" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/100000132260667/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=80792" class="info-item">吳曉興</a>
+					<span class="info-item">2018/07/04</span>
+					<span class="info-item"><i class="icon-eye"></i> 1,021</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27051&subtitle=%E3%80%90%E5%85%A8%E5%8F%B0%E8%87%AA%E8%A1%8C%E8%BB%8A%E8%B7%AF%E7%B7%9A%E3%80%91%E4%B9%9D%E5%B0%8F%E6%99%82%E6%9D%B1%E9%80%B2%E6%AD%A6%E5%B6%BA%E2%80%94KOM%E8%B7%AF%E7%B7%9A%E5%AE%8C%E9%A8%8E%E6%94%BB%E7%95%A5" title="【全台自行車路線】九小時東進武嶺—KOM路線完騎攻略" data-original="http://cdntwrunning.biji.co/300_b856bccb366c12ec80d0517d1625da86.jpg">
+				<img src="http://cdntwrunning.biji.co/300_b856bccb366c12ec80d0517d1625da86.jpg" alt="【全台自行車路線】九小時東進武嶺—KOM路線完騎攻略" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27051&subtitle=%E3%80%90%E5%85%A8%E5%8F%B0%E8%87%AA%E8%A1%8C%E8%BB%8A%E8%B7%AF%E7%B7%9A%E3%80%91%E4%B9%9D%E5%B0%8F%E6%99%82%E6%9D%B1%E9%80%B2%E6%AD%A6%E5%B6%BA%E2%80%94KOM%E8%B7%AF%E7%B7%9A%E5%AE%8C%E9%A8%8E%E6%94%BB%E7%95%A5">【全台自行車路線】九小時東進武嶺—KOM路線完騎攻略</a></h3>
+				<p class="teaser">
+					每每出發新的挑戰，尤其在江湖傳聞已久的夢幻路線
+有如初生之犢，也是有夢想東進武嶺der!!!!
+
+
+
+「我們也...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=559663" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/1460148323998601/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=559663" class="info-item">鄭悠 悠</a>
+					<span class="info-item">2018/07/03</span>
+					<span class="info-item"><i class="icon-eye"></i> 2,406</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 2</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27050&subtitle=%E6%8F%AA%E5%9C%98%E6%B5%B7%E5%A4%96%E9%A8%8E%E6%97%85-Mt.15+%E6%97%A5%E6%9C%AC%E5%AF%8C%E5%A3%AB%E5%B1%B1%E6%8C%91%E6%88%B0" title="揪團海外騎旅-Mt.15 日本富士山挑戰" data-original="http://cdntwrunning.biji.co/300_d38ea9b24becd34fc4d1f6550525ccbb.jpg">
+				<img src="http://cdntwrunning.biji.co/300_d38ea9b24becd34fc4d1f6550525ccbb.jpg" alt="揪團海外騎旅-Mt.15 日本富士山挑戰" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27050&subtitle=%E6%8F%AA%E5%9C%98%E6%B5%B7%E5%A4%96%E9%A8%8E%E6%97%85-Mt.15+%E6%97%A5%E6%9C%AC%E5%AF%8C%E5%A3%AB%E5%B1%B1%E6%8C%91%E6%88%B0">揪團海外騎旅-Mt.15 日本富士山挑戰</a></h3>
+				<p class="teaser">
+					身為車愛好者
+除了喜歡騎過國內各大景點以外，能帶著自己的單車出國旅遊+比賽，也算是大家的夢想之一吧!
+連續兩年...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=72480" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/100000527642068/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=72480" class="info-item">李冠賢</a>
+					<span class="info-item">2018/06/27</span>
+					<span class="info-item"><i class="icon-eye"></i> 1,789</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 2</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27049&subtitle=%E3%80%90%E5%96%AE%E8%BB%8A%E9%81%8A%E8%A8%98%E3%80%91%E9%99%BD%E6%98%8E%E5%B1%B1%E8%B3%9E%E8%8A%B1%E9%A8%8E%E8%B7%A1" title="【單車遊記】陽明山賞花騎跡" data-original="http://cdntwrunning.biji.co/300_74c963f016f58508730f218d3cb53421.jpg">
+				<img src="http://cdntwrunning.biji.co/300_74c963f016f58508730f218d3cb53421.jpg" alt="【單車遊記】陽明山賞花騎跡" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27049&subtitle=%E3%80%90%E5%96%AE%E8%BB%8A%E9%81%8A%E8%A8%98%E3%80%91%E9%99%BD%E6%98%8E%E5%B1%B1%E8%B3%9E%E8%8A%B1%E9%A8%8E%E8%B7%A1">【單車遊記】陽明山賞花騎跡</a></h3>
+				<p class="teaser">
+					日期: 2018年6月23日
+天氣: 晴
+騎乘距離: 50 公里
+路線: 新北市蘆洲→新北投捷運站→泉源路→少...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=722406" class="avatar img--xxs img-cover" style="background-image: url(https://graph.facebook.com/1524229167623401/picture?type=large)"></a>
+					<a href="/index.php?q=member&member=722406" class="info-item">林鴻維</a>
+					<span class="info-item">2018/06/25</span>
+					<span class="info-item"><i class="icon-eye"></i> 572</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27048&subtitle=%E3%80%90%E9%A8%8E%E8%A1%8C%E3%80%91DAY+10+%E5%8D%97%E6%BE%B3-%E9%A0%AD%E5%9F%8E%E9%BE%9C%E5%B1%B1%E6%9C%9D%E6%97%A5%E9%9C%B2%E7%87%9F+%E5%B0%8F%E7%8F%AE%E7%92%B0%E5%B3%B6%E9%A8%8E%E8%A1%8C%E4%B9%8B%E8%98%87%E8%8A%B1%E5%85%AC%E8%B7%AF%E3%80%8A%E4%BA%8C%E3%80%8B" title="【騎行】DAY 10 南澳-頭城龜山朝日露營 小珮環島騎行之蘇花公路《二》" data-original="http://cdntwrunning.biji.co/300_d1a7178de9b408d97731c9881015d390.png">
+				<img src="http://cdntwrunning.biji.co/300_d1a7178de9b408d97731c9881015d390.png" alt="【騎行】DAY 10 南澳-頭城龜山朝日露營 小珮環島騎行之蘇花公路《二》" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27048&subtitle=%E3%80%90%E9%A8%8E%E8%A1%8C%E3%80%91DAY+10+%E5%8D%97%E6%BE%B3-%E9%A0%AD%E5%9F%8E%E9%BE%9C%E5%B1%B1%E6%9C%9D%E6%97%A5%E9%9C%B2%E7%87%9F+%E5%B0%8F%E7%8F%AE%E7%92%B0%E5%B3%B6%E9%A8%8E%E8%A1%8C%E4%B9%8B%E8%98%87%E8%8A%B1%E5%85%AC%E8%B7%AF%E3%80%8A%E4%BA%8C%E3%80%8B">【騎行】DAY 10 南澳-頭城龜山朝日露營 小珮環島騎行之蘇花公路《二》</a></h3>
+				<p class="teaser">
+					原文連結 ? ? Facebook專頁
+個人網站：林清烽戶外筆記
+
+?
+比起昨天花蓮段懸崖隧道不斷的上下起伏路...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=502405" class="avatar img--xxs img-cover" style="background-image: url(https://cdntwrunning.biji.co/300_0769c8ccd3eeea29704bc9959d8ba4db.png)"></a>
+					<a href="/index.php?q=member&member=502405" class="info-item">林清烽戶外筆記</a>
+					<span class="info-item">2018/06/25</span>
+					<span class="info-item"><i class="icon-eye"></i> 696</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 0</span>
+				</div>
+			</div>
+		</li>
+				<li class="card-item col-c3 shadow-z1">
+			<a class="postMeta-img lazy" href="/index.php?q=review&act=detail&id=27047&subtitle=%E3%80%90%E9%A8%8E%E8%A1%8C%E3%80%91DAY+9+%E8%8A%B1%E8%93%AE-%E5%8D%97%E6%BE%B3%E8%BE%B2%E5%A0%B4%E9%9C%B2%E7%87%9F+%E5%B0%8F%E7%8F%AE%E7%92%B0%E5%B3%B6%E9%A8%8E%E8%A1%8C%E4%B9%8B%E8%98%87%E8%8A%B1%E5%85%AC%E8%B7%AF%E3%80%8A%E4%B8%80%E3%80%8B%2820171002%29" title="【騎行】DAY 9 花蓮-南澳農場露營 小珮環島騎行之蘇花公路《一》(20171002)" data-original="http://cdntwrunning.biji.co/300_3312019ba6a6f50490ed9de86b7506a8.png">
+				<img src="http://cdntwrunning.biji.co/300_3312019ba6a6f50490ed9de86b7506a8.png" alt="【騎行】DAY 9 花蓮-南澳農場露營 小珮環島騎行之蘇花公路《一》(20171002)" class="is-invisible">
+			</a>
+			<div class="postMeta-feedSummery">
+				<h3 class="review-title"><a href="/index.php?q=review&act=detail&id=27047&subtitle=%E3%80%90%E9%A8%8E%E8%A1%8C%E3%80%91DAY+9+%E8%8A%B1%E8%93%AE-%E5%8D%97%E6%BE%B3%E8%BE%B2%E5%A0%B4%E9%9C%B2%E7%87%9F+%E5%B0%8F%E7%8F%AE%E7%92%B0%E5%B3%B6%E9%A8%8E%E8%A1%8C%E4%B9%8B%E8%98%87%E8%8A%B1%E5%85%AC%E8%B7%AF%E3%80%8A%E4%B8%80%E3%80%8B%2820171002%29">【騎行】DAY 9 花蓮-南澳農場露營 小珮環島騎行之蘇花公路《一》(20171002)</a></h3>
+				<p class="teaser">
+					原文連結? FB專頁
+個人網站：林清烽戶外筆記
+
+在台灣單車環島路線中著名的蘇花公路，除了清水段的臨海懸崖道以...				</p>
+				<div class="info">
+					<a href="/index.php?q=member&member=502405" class="avatar img--xxs img-cover" style="background-image: url(https://cdntwrunning.biji.co/300_0769c8ccd3eeea29704bc9959d8ba4db.png)"></a>
+					<a href="/index.php?q=member&member=502405" class="info-item">林清烽戶外筆記</a>
+					<span class="info-item">2018/06/17</span>
+					<span class="info-item"><i class="icon-eye"></i> 1,063</span>
+					<span class="info-item"><i class="fa fa-heart"></i> 1</span>
+				</div>
+			</div>
+		</li>
+			</ul>
+	<div class="loading is-hidden" id="loading">
+		<div class="md-preloader">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 75 75"><circle cx="37.5" cy="37.5" r="33.5"></svg>
+		</div>
+	</div>
+		<input type='hidden' id='now_rows' value="20">
+	<input type='hidden' id='need_rows' value="20">
+</div>
+<script>
+	$( ".order_select" ).click(function() {
+	   var order = $(this).attr('data-value');
+	   var cate = 'new';
+	   location.href = "/index.php?q=review&cate="+cate+"&order="+order;
+	});
+	
+	var finish_tag = true;
+	var $container = $('#masonry_container');
+	$container.masonry();
+	
+	$(window).scroll(function () 
+	{
+		if(finish_tag)
+		{
+			if ($(window).scrollTop() >= $(document).height() - $(window).height() - 500)
+			{
+				var ttl_rows = "284";
+				var now_rows = $('#now_rows').val();
+				var need_rows = $('#need_rows').val();
+		
+				if(parseInt(now_rows) < parseInt(ttl_rows))
+				{
+				
+					finish_tag = false;
+					$('#loading').removeClass('is-hidden');
+					$.ajax({
+						url: '/index.php?pop=ajax&func=review&fename=get_more_review',
+						type: 'POST',
+						data: {'cate':'new','order':'new','now_rows':now_rows,'need_rows':need_rows},
+						success: function (msg){
+							if (msg!='')
+							{
+								var $more_data = $(msg);
+								$container.append($more_data);
+								$container.masonry('appended',$more_data,true);
+								$more_data.find(".lazy").lazyload({effect : "fadeIn"});
+								$('#loading').addClass('is-hidden');
+								$('#now_rows').val(parseInt(now_rows)+parseInt(need_rows));
+								finish_tag = true;
+							}
+							else
+							{
+								$('#loading').addClass('is-hidden');
+							}
+						}
+					});
+				}
+			}
+		}
+	});
+</script></div>
+		<footer class="footer">
+			<div class="footer-statement-wrap">
+				<div class="footer-statement col-c12">
+					<ul class="follow-list">
+						<li class="follow-item"><a href="https://www.facebook.com/CyclingTheNote?fref=ts" target="_blank"><i class="fa fa-facebook-official"></i> 自行車筆記粉絲專頁</a></li>
+						<li class="follow-item"><div class="fb-like"data-colorscheme="dark" data-href="https://www.facebook.com/CyclingTheNote?fref=ts" data-layout="standard" data-share="false" data-show-faces="false"></div>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+			<div class="footer-nav-wrap col-c12">
+				<div class="footer-nav">
+						<div class="footer-nav-item">
+		<a target="_blank" c_type="footer" c_data="0" href="http://www.biji.co/	" title="關於筆記">關於筆記</a>
+	</div>
+	<div class="footer-nav-item">
+		<a target="_blank" c_type="footer" c_data="1" href="https://www.facebook.com/CyclingTheNote/" title="FB粉絲專頁">FB粉絲專頁</a>
+	</div>
+	<div class="footer-nav-item">
+		<a target="_blank" c_type="footer" c_data="2" href="http://hiring.biji.co/" title="人才募集">人才募集</a>
+	</div>
+	<div class="footer-nav-item">
+		<a target="_blank" c_type="footer" c_data="3" href="https://drive.google.com/file/d/1ft06MKLKnwZg6Cz7-YSg1C75g67VvpEC/view" title="廣告合作">廣告合作</a>
+	</div>
+	<div class="footer-nav-item">
+		<a target="_blank" c_type="footer" c_data="4" href="/index.php?q=static&act=info&id=3&subtitle=聯絡我們" title="聯絡我們">聯絡我們</a>
+	</div>
+	<div class="footer-nav-item">
+		<a target="_blank" c_type="footer" c_data="5" href="http://biji.co/privacy/" title="服務條款與隱私權政策">服務條款與隱私權政策</a>
+	</div>
+				</div>
+				<div class="copyright">
+					? 自行車筆記 <span>Cycling.biji</span>
+				</div>
+			</div>
+		</footer>
+		<div id="call_fqa" class="is-hidden"></div>
+		<div id="fqa" class="fqa-block">
+			<h4 class="fqa-title" id="fqa_title">請在此留下訊息，我們會盡快回覆您的問題</h4>
+			<div class="fb-page" data-tabs="messages" data-href="https://www.facebook.com/CyclingTheNote/?fref=ts" data-width="370px"data-height="320px"></div>
+			<a id="clz_fqa" href="javascript:;" class="clz-btn"><i class="fa fa-times"></i></a>
+		</div>
+		<div id="footer_fixbar" class="footer-fixed-bar">
+			<a href="javascript:;" class="footer-fixed-item is-qa help_btn"><i class="icon-question"></i></a>
+			<a href="javascript:;" id="scroltolTop" class="footer-fixed-item"><i class="icon-control-end rotate-90"></i></a>
+		</div>
+				<div id='index_pop_background'>
+			<div id="hello_pop" class="hello-pop">
+				<div id='index_pop_frame'></div>
+				<div id='index_pop_close'></div>
+			</div>
+			<div id='index_pop_second_frame'></div>
+			<div id='pop_background_close'></div>
+			<div id='cancel_pop_frame' class='fa fa-close'></div>
+		</div>
+		<style>
+		#index_pop_background{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.5);
+          display: none;
+          z-index: 900;
+        }
+        #pop_background_close{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 901;
+        }
+        #index_pop_second_frame {
+          position: absolute;
+          display: none;
+          max-width: 1200px;
+          top: 190px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          z-index: 999;
+        }
+        #hello_pop{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -moz-transform: scale(1) translateX(-50%) translateY(-50%);
+          -webkit-transform: scale(1) translateX(-50%) translateY(-50%);
+          -o-transform: scale(1) translateX(-50%) translateY(-50%);
+          -ms-transform: scale(1) translateX(-50%) translateY(-50%);
+          transform: scale(1) translateX(-50%) translateY(-50%);
+          z-index: 1000;
+          text-align: center;
+          background-color: #fff;
+          -webkit-border-radius: 3px 3px 3px 3px;
+          border-radius: 3px 3px 3px 3px;
+          -webkit-backface-visibility: hidden;
+          -moz-backface-visibility: hidden;
+          -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+        }
+        #pop_frame {
+          overflow: hidden;
+        }
+        #index_pop_close {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 1001;
+          width: 45px;
+          height: 45px;
+          cursor: pointer;
+        }
+        #index_pop_close:hover{
+          opacity: 0.5;
+          filter: alpha(opacity=50);
+        }
+        #index_pop_close::before,
+        #index_pop_close::after{
+          position: absolute;
+          top: 22px;
+          right: 12px;
+          content: '';
+          width: 22px;
+          height: 2px;
+          background-color: rgb(221, 221, 221);
+        }
+        #index_pop_close::before{
+          -moz-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        #index_pop_close::after{
+          -moz-transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        .pop-inner{
+          padding: 30px;
+          min-width: 380px;
+        }
+        .pop-title{
+          color: rgb(111, 123, 138);
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+        .pop-text{
+          color: rgb(149, 152, 154);
+          font-size: 14px;
+          text-align: left;
+          margin-bottom: 15px;
+          line-height: 1.4;
+        }
+        #cancel_pop_frame {
+          position: fixed;
+          left: 50%;
+          top:50%;
+          z-index: 1200;
+          margin-top: -150px;
+          margin-left: 220px;
+          display: none;
+          cursor: pointer;
+        }
+		</style>
+				<input type='file' id='img_uploader' accept='image/*' style='display:none;'> 
+		<input type='hidden' id='img_upload_effect_field' value=''>
+		<input type='hidden' id='final_img_name' value=''>
+		<script src="/static/js/computer/main.js"></script>
+	</body>
+</html>
+<script>
+    $('#biji_central_login').on('click',function() {
+        ga('send', 'event', {'eventCategory': 'login', 'eventAction':'login', 'eventLabel':'cycling-tw (computer)'});
+    });
+</script>
+

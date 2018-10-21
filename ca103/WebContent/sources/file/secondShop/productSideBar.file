@@ -1,0 +1,52 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+    ProductService productforRating = new ProductService(); 
+    Integer ratingAvg = productforRating.memRatingAvg(memId);
+    Integer ratingCount = productforRating.memRatingCount(memId);
+%>
+					   	
+
+	               <div class="col-12 col-sm-2 bgg">           
+
+                        <div class="container shodd2 mt-2 borderradiusMy border">
+                              <div class="row justify-content-center">
+                                  <%if(memVO.getMem_photo()!=null){%>
+                                        <img class="img-fluid"src="<%=request.getContextPath()%>/Mem_photoReader?mem_id=${memVO.mem_id}"  style="height: 100px; width: 80px">  
+                                    <%}else{%>
+                                       <img class="img-fluid" src="<%=request.getContextPath()%>/sources/icon/secondShop/girl-1.png"> 
+                                    <%}%> 
+                              </div> 
+                              <span class="font-smll align-self-end text-white">我的評分：<%=ratingAvg %></span>  
+                        </div>
+
+                        <div class="list-group mt-2">
+                            <a href="<%=request.getContextPath()%>/front-end/secondShop/Currency.jsp" class="list-group-item list-group-item-action" id="active-color">
+                                <img src="<%=request.getContextPath()%>/sources/icon/secondShop/cash-1.png"/> 自転幣
+                            </a>
+                            <a href="<%=request.getContextPath()%>/front-end/secondShop/productMem-sale.jsp" class="list-group-item list-group-item-action" id="active-color">
+                                <img src="<%=request.getContextPath()%>/sources/icon/secondShop/online-store.png"/> 賣家中心
+                            </a>
+                            <a href="<%=request.getContextPath()%>/front-end/secondShop/addProduct.jsp"class="list-group-item list-group-item-action productmen-color">
+                                <img src="<%=request.getContextPath()%>/sources/icon/secondShop/document.png"/> 新增商品
+                            </a> 
+                            <a href="<%=request.getContextPath()%>/front-end/secondShop/productMem-sale.jsp" class="list-group-item list-group-item-action productmen-color">
+                                <img src="<%=request.getContextPath()%>/sources/icon/secondShop/notepad.png"/>我的商品管理
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action" id="active-color">
+                                <img src="<%=request.getContextPath()%>/sources/icon/secondShop/b.png"/> 買家中心
+                            </a>
+                            <a href="<%=request.getContextPath()%>/front-end/secondShop/productDelivery.jsp" class="list-group-item list-group-item-action productmen-color" > 
+                                <img src="<%=request.getContextPath()%>/sources/icon/secondShop/motorcycle-1.png"/> 我的收貨地址
+                            </a>
+                            <a href="<%=request.getContextPath()%>/front-end/secondShop/productBidding.jsp" class="list-group-item list-group-item-action productmen-color"> 
+                                <img src="<%=request.getContextPath()%>/sources/icon/secondShop/auction-2.png"/> 我的競標紀錄
+                            </a>
+                            <a href="<%=request.getContextPath()%>/front-end/secondShop/productBuyList.jsp" class="list-group-item list-group-item-action productmen-color"> 
+                                <img src="<%=request.getContextPath()%>/sources/icon/secondShop/shopping-bag.png"/> 我的敗家記錄
+                            </a>
+                            <a href="<%=request.getContextPath()%>/front-end/secondShop/productFavorite.jsp" class="list-group-item list-group-item-action productmen-color"> 
+                                <img src="<%=request.getContextPath()%>/sources/icon/secondShop/file.png"/> 我的商品收藏
+                            </a>
+                        </div>
+
+                    </div>

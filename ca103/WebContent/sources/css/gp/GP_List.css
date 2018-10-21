@@ -1,0 +1,61 @@
+.row {
+    width: 100%;
+}
+
+.btn-info{
+	color:#010;
+	border-color:#17c;
+	background-color:white;
+}
+.btn-info:hover{
+	color:#09A;
+	border-color:#17c;
+	background-color:#ddd;
+}
+.padding_Top {
+/*     padding-top: 65px; */
+}
+
+.search {
+    margin-bottom: 50px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+/*Select���嚙踝蕭��蕭豲嚙踝�������蕭�*/
+.ui-selectmenu-button.ui-button {
+    width: 7em;
+}
+/*Select���嚙踝蕭��蕭豲嚙踝�������蕭�*/
+.ui-selectmenu-button,ui-button,ui-widget,ui-selectmenu-button-open,ui-corner-top{
+    background-color: white;
+}
+#dateStart{
+    width: 100px;
+    margin-right: -10px;
+    text-align: center;
+}
+#dateEnd{
+    width: 100px;
+    margin-left: -10px;
+    text-align: center;
+}
+/*search���雓�嚙踝蕭��嚙踐���蕭豲頩�ut*/
+button, input{
+    line-height:1.75;
+    vertical-align:middle;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:1em;
+}
+/*Search���雓姿�嚙踐���*/
+.search button{
+    width: 150px;
+}
+/*嚙踝蕭豯殷���嚙踐�蕭嚙踐�嚙踝蕭��嚙踐飭���������嚙踐*/
+a{
+    color: black;
+}
+a:hover{
+    color: black;
+    text-decoration:none;
+}
+

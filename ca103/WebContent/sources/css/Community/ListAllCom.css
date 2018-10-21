@@ -1,0 +1,58 @@
+<style type="text/css">
+	  
+	.container_card {
+		border: 1px solid;
+		borde-color:	#DDDDDD;
+
+	  }
+	
+	.cardborder {
+		border-top-color: rgba(0, 0, 0, 0.125);
+	    border-top-style: solid;
+	    border-top-width: 1px;
+	    border-right-color: rgba(0, 0, 0, 0.125);
+	    border-right-style: solid;
+	    border-right-width: 1px;
+	    border-bottom-color: rgba(0, 0, 0, 0.125);
+	    border-bottom-style: solid;
+	    border-bottom-width: 1px;
+	    border-left-color: rgba(0, 0, 0, 0.125);
+	    border-left-style: solid;
+	    border-left-width: 1px;
+	    border-image-source: initial;
+	    border-image-slice: initial;
+	    border-image-width: initial;
+	    border-image-outset: initial;
+	    border-image-repeat: initial;
+	  }
+	
+	.container {
+		margin-top:2;
+		margin-bottom:2;
+	}
+	
+	.container1 {	
+		padding: 5px;
+	}	 
+	  
+	.comimg {
+		width: 100%;
+    	height: 100%;
+		padding: 5px;
+	}
+	
+	.comimg1{
+        padding: 5px;
+        margin-left: 0px;
+      }		 
+	
+	.comimg2{
+        margin-left: 0px;
+        padding: 5px;
+      }
+	
+	.listIcon {
+		margin-left: 15px;
+	}
+	
+</style>

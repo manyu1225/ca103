@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.secondShop.productDelivery.model.DeliveryVO" table="PRODUCT_Delivery" >
+        
+        <id name="deliveryId" column="Delivery_ID">
+            <generator class="sequence">
+                <param name="DELIVERY_SEQ">DELIVERY_SEQ</param>
+            </generator>  
+        </id>
+   
+        <property name="memId" column="mem_Id" />
+        <property name="deliveryName" column="Delivery_name" />
+        <property name="deliveryAddress" column="Delivery_address" />
+        <property name="deliveryPhone" column="Delivery_phone" />
+    </class>
+</hibernate-mapping>

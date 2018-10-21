@@ -1,0 +1,112 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+	<!-- 	前面的「至第一頁」和「上一頁」按鈕*********************************************************************************************** -->
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center" style="opacity:0.9">
+			
+<%			if(rowsPerPage<rowNumber){
+				if(pageIndex>=rowsPerPage){ %>
+					<li class="page-item">
+						<a class="page-link" href="<%=request.getRequestURI()%>?whichPage=1#routeMessagePage">至第一頁</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="<%=request.getRequestURI()%>?whichPage=<%=whichPage-1%>#routeMessagePage">上一頁</a>
+					</li>
+<%				}else { %>
+					<li class="page-item disabled">
+						<a class="page-link" href="#" tabindex="-1">至第一頁</a>
+					</li>
+					<li class="page-item disabled">
+						<a class="page-link" href="#" tabindex="-1">上一頁</a>
+					</li>		
+<%				} %>
+
+	<!-- 	數字按鈕的跳頁*************************************************************************** -->
+<%				//	設定被選中的style屬性
+				String bgColor = "";
+				//	當「總頁面數<5」時
+				if(pageNumber < 5){
+					for(int i = 1; pageNumber >= i; i++){
+						if(whichPage==i){bgColor = "#dee2e6";}else{bgColor = "";} %>
+						<li class="page-item"><a style="background-color:<%= bgColor %>" class="page-link" href="<%=request.getRequestURI()%>?whichPage=<%=i%>#routeMessagePage"><%= i %></a></li>
+
+<%					}
+				//	或「總頁面數>5」時
+				}else{
+					//	中途用的List計算器
+					int counting = whichPage-2;
+					//	最後用的List計算器
+					int counted = pageNumber-4;
+					
+					//	當「此頁面數大於3」的狀況,在頁碼數最前面加上「...」狀態
+					if(whichPage > 3 && pageNumber > 5){ %>
+						<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">...</a></li>
+<%					} 
+					//	當「此頁面數小於3」且「總頁數大於5」的狀況,一共最多跑5頁出來
+					if(whichPage < 3){
+						for(int i = 1; 5 >= i; i++){
+							if(whichPage==i){bgColor = "#dee2e6";}else{bgColor = "";} %>
+							<li class="page-item"><a style="background-color:<%= bgColor %>" class="page-link" href="<%=request.getRequestURI()%>?whichPage=<%=i%>#routeMessagePage"><%= i %></a></li>
+<%						} 
+					} 
+					//	當「此頁面數大於3」且「總頁數與此頁數相差大於2」的狀況,最多跑此頁數的前兩頁+後兩頁=共五頁出來
+					if(whichPage > 2 && (pageNumber - whichPage) > 1){
+						for(int i = (whichPage - 2); (whichPage + 3)  > i ; i++){
+							if(whichPage==counting){bgColor = "#dee2e6";}else{bgColor = "";} %>
+							<li class="page-item"><a style="background-color:<%= bgColor %>" class="page-link" href="<%=request.getRequestURI()%>?whichPage=<%=counting%>#routeMessagePage"><%= counting %></a></li>
+<%							counting++;
+						}
+					}
+					//	當「總頁數與此頁數相差小於3」的狀況,最多跑總頁數的末五頁
+					if((pageNumber - whichPage) < 2){
+						for(int i = (pageNumber - 4); pageNumber >= i ; i++){
+							if(whichPage==counted){bgColor = "#dee2e6";}else{bgColor = "";} %>
+							<li class="page-item"><a style="background-color:<%= bgColor %>" class="page-link" href="<%=request.getRequestURI()%>?whichPage=<%=counted%>#routeMessagePage"><%= counted %></a></li>
+<%							counted++;
+						}
+					}
+					//	當「總頁數與此頁數相差大於2」的狀況,在頁碼的末端加上「...」狀態
+					if((pageNumber - whichPage) > 2 && pageNumber > 5){%>
+						<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">...</a></li>
+<%					} 
+				}%>
+				<!-- 後面的「下一頁」和「至最後一頁」******************************************************************************* -->
+<%				if(pageIndex<pageIndexArray[pageNumber-1]){ %>
+					<li class="page-item">
+						<a class="page-link" href="<%=request.getRequestURI()%>?whichPage=<%=whichPage+1%>#routeMessagePage">下一頁</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="<%=request.getRequestURI()%>?whichPage=<%=pageNumber%>#routeMessagePage">至最後一頁</a>
+					</li>
+<%				}else{ %>
+					<li class="page-item disabled">
+						<a class="page-link" href="#" tabindex="-1">下一頁</a>
+					</li>
+					<li class="page-item disabled">
+						<a class="page-link" href="#" tabindex="-1">至最後一頁</a>
+					</li>
+						
+<%				} 
+			}%> 
+	
+		</ul>
+	</nav>
+  
+  
+    
+    
+
+
+<div style="display:none">
+  <%if (pageNumber>1) {%>
+    <FORM METHOD="post" ACTION="<%=request.getRequestURI()%>">   
+       <select size="1" name="whichPage">
+         <%for (int i=1; i<=pageNumber; i++){%>
+            <option value="<%=i%>">跳至第<%=i%>頁
+         <%}%> 
+       </select>
+       <input type="submit" value="確定" >  
+    </FORM>
+  <%}%>
+</div>
+<!-- *********************************************************************************************** -->

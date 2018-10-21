@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Title Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+    <h1 class="text-center">哈囉～哩後！</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-2"></div>
+            <div class="col-xs-12 col-sm-8">
+                <span id="hour"></span><span> 時</span>
+                <span id="min"></span><span> 分</span>
+                <span id="sec"></span><span> 秒</span>
+
+                <div>
+                	<span>TimeOut</span><span id="afterTimeOut">ooo</span>
+                </div>
+                <hr>
+                <div>
+                	<span>IntervalOut </span>
+                	<div>0</div>
+                	<button name="startCount" onclick="go(event)">111</button>
+                </div>
+                <hr>
+                <div>
+                	<span>IntervalOut2 </span>
+                	<div>0</div>
+                	<button name="startCount" onclick="go2(this)">222</button>
+                </div>
+                <hr>
+                <div>
+                	<span>IntervalOut3 </span>
+                	<div>0</div>
+                	<button name="startCount2" >456</button>
+                </div>
+                <hr>
+                <div>
+                	<span>IntervalOut4 </span>
+                	<div>0</div>
+                	<button name="startCount2" >456</button>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		// var endDate = new Date(2018,8,20,12,00,00 );
+		$(document).ready(function(){
+			var id = setInterval(work,1000)
+			var dday = Math.floor(  secondLeft / 86400 ) 			//24小時＊60分鐘*60秒  =>一天秒數 86400
+			var hhr = Math.floor(  (secondLeft % 86400) / 3600 ) 	//60分鐘*60秒			 =>一小時秒數 3600
+			var mmin = Math.floor( (secondLeft % 86400  % 3600)/ 60 )
+			var ssec = Math.floor( secondLeft % 86400 % 3600 % 60 )
+			$(event.target).prev().text('倒數 '+dday+'天 '+hhr+':'+mmin+':'+ssec)
+			secondLeft--;
+
+			if(secondLeft==0){
+				clearInterval(id)
+			}
+		})
+
+
+		function go(event){
+			console.log(event.target)
+			var nowDate = new Date();
+			var endDate = new Date();
+			endDate = new Date( endDate.setDate(endDate.getDate()+1) )
+			var secondLeft = (endDate-nowDate)/1000;
+
+			var id = setInterval(work,1000)
+
+			function work(){
+				var dday = Math.floor(  secondLeft / 86400 ) 			//24小時＊60分鐘*60秒  =>一天秒數 86400
+				var hhr = Math.floor(  (secondLeft % 86400) / 3600 ) 	//60分鐘*60秒			 =>一小時秒數 3600
+				var mmin = Math.floor( (secondLeft % 86400  % 3600)/ 60 )
+				var ssec = Math.floor( secondLeft % 86400 % 3600 % 60 )
+
+				$(event.target).prev().text('倒數 '+dday+'天 '+hhr+':'+mmin+':'+ssec)
+				secondLeft--;
+
+				if(secondLeft==0){
+					clearInterval(id)
+				}
+			}
+		}
+
+
+
+		function go2(aa){
+			console.log(aa)
+			var nowDate = new Date();
+			var endDate = new Date();
+			endDate = new Date( endDate.setDate(endDate.getDate()+1) )
+			var secondLeft = (endDate-nowDate)/1000;
+
+			var id = setInterval(work,1000)
+
+			function work(){
+				var dday = Math.floor(  secondLeft / 86400 ) 			//24小時＊60分鐘*60秒  =>一天秒數 86400
+				var hhr = Math.floor(  (secondLeft % 86400) / 3600 ) 	//60分鐘*60秒			 =>一小時秒數 3600
+				var mmin = Math.floor( (secondLeft % 86400  % 3600)/ 60 )
+				var ssec = Math.floor( secondLeft % 86400 % 3600 % 60 )
+
+				$(aa).prev().text('倒數 '+dday+'天 '+hhr+':'+mmin+':'+ssec)
+				secondLeft--;
+
+				if(secondLeft==0){
+					clearInterval(id)
+				}
+			}
+		}
+
+		$('button[name=startCount2]').click(function(){
+			var tagg = this;
+			var nowDate = new Date();
+			var endDate = new Date();
+			endDate = new Date( endDate.setDate(endDate.getDate()+1) )
+			var secondLeft = (endDate-nowDate)/1000;
+
+			var id = setInterval(work2,1000)
+			console.log(id);
+
+			function work2(){
+				var dday = Math.floor(  secondLeft / 86400 ) 			//24小時＊60分鐘*60秒  =>一天秒數 86400
+				var hhr = Math.floor(  (secondLeft % 86400) / 3600 ) 	//60分鐘*60秒			 =>一小時秒數 3600
+				var mmin = Math.floor( (secondLeft % 86400  % 3600)/ 60 )
+				var ssec = Math.floor( secondLeft % 86400 % 3600 % 60 )
+
+				$(tagg).prev().text('倒數 '+dday+'天 '+hhr+':'+mmin+':'+ssec)
+				secondLeft--;
+
+				if(secondLeft==0){
+					clearInterval(id)
+				}
+			}
+
+
+			// setInterval(intervalOutRun(),1000)
+
+			// function intervalOutRun(){
+			// 	var dday = Math.floor(  secondLeft / 86400 ) 			//24小時＊60分鐘*60秒  =>一天秒數 86400
+			// 	var hhr = Math.floor(  (secondLeft % 86400) / 3600 ) 	//60分鐘*60秒			 =>一小時秒數 3600
+			// 	var mmin = Math.floor( (secondLeft % 86400  % 3600)/ 60 )
+			// 	var ssec = Math.floor( secondLeft % 86400 % 3600 % 60 )
+			// 	console.log('倒數 '+dday+'天 '+hhr+':'+mmin+':'+ssec)
+			// 	// $(this).prev().text('倒數 '+dday+'天 '+hhr+':'+mmin+':'+ssec)
+			// 	secondLeft--;
+			// }
+		})
+
+
+
+
+
+		// setTimeout(timeOutRun,5000)
+		// function timeOutRun(){
+		// 	$('#afterTimeOut').text("32131231231231")
+		// 	console.log('run-timeOutRun')
+		// }
+
+	</script>
+
+
+
+
+
+
+
+<!--     <script type="text/javascript" src="jquery.timers.js"></script>
+    <script type="text/javascript">
+	    var startDate = new Date();
+	    var endDate = new Date('2018/09/20 11:05');
+	    var spantime = (endDate - startDate) / 1000;
+
+	    $(this).everyTime('1s', function(i) {
+	        spantime--;
+	        var d = Math.floor(spantime / (24 * 3600));
+	        var h = Math.floor((spantime % (24 * 3600)) / 3600);
+	        var m = Math.floor((spantime % 3600) / (60));
+	        var s = Math.floor(spantime % 60);
+
+	        if (spantime > 0) {
+	            $('#hour').text(h + (d * 24));
+	            $('#min').text(m);
+	            $('#sec').text(s);
+	        } else { // 避免倒數變成負的
+	            $('#hour').text(0);
+	            $('#min').text(0);
+	            $('#sec').text(0);
+	        }
+	    });
+    </script> -->
+</body>
+
+</html>

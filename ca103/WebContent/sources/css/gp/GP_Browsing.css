@@ -1,0 +1,340 @@
+/*
+body{font-family:"Roboto", "sans-serif", "���雓▼��蕭嚙踐�蕭豲���雓�揭嚙踝蕭謕蕭��嚙踐�蕭�嚙踝蕭謕蕭��雓����蕭�����雓蕭���嚙踐��憌蕭�嚙踝蕭謕蕭��蕭��嚙踐揭���嚙踝蕭�餈典��嚙踝蕭謕蕭豲��嚙踝�揭", "MS PGothic";font-size: 15px; color: #484848;line-height: 22px;background-color:#fff;}
+nav,
+.Leaderboard {
+    margin-bottom: 10px;
+}
+*/
+/*
+#imgLogo {
+    width: 40px;
+    height: 46px;
+}
+*/
+
+/*
+.logoBg {
+    background-color: #33CCFF;
+    margin-left: -16px;
+    margin-top: -12px;
+    margin-bottom: -12px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+*/
+
+/*
+#navbarText {
+    background-color: white;
+    border-style: #ffff;
+
+}
+#startDiv{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+#startGP{
+    background-color: #a3d1d1;
+    position: relative;
+    z-index: 15;
+    left: -50%; 
+    width: 260px;
+    height: 60px;
+    border-radius:60px;
+    display:inline-block;
+    font-size: 25px;
+    vertical-align:middle;
+    text-align: center;
+}
+*/
+
+/* html { */
+/* 			height: 100%;  */
+/*  	} */
+ 	
+
+body{
+	
+/* 	background-color:#f5f5f5; */
+		    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  		background-attachment: fixed;
+
+}
+a{
+	font-weight:700;
+}
+
+.btn-info{
+	color:#09A;
+	border-color:#17c;
+	background-color:white;
+}
+.btn-info:hover{
+	color:#09A;
+	border-color:#17c;
+	background-color:#ddd;
+}
+.btn-info.disabled{
+	color:#09A;
+	border-color:#17c;
+	background-color:#ddd;
+}
+
+.row {
+    width: 100%;
+}
+
+
+.paddingTop {
+/*     padding-top: 60px; */
+}
+
+/*
+.marginBottom {
+    margin-bottom: 10px;
+}
+*/
+
+.search {
+    margin-bottom: 50px;
+	opacity:0.8;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+/*Select嚙踝蕭謕蕭豲���嚙踝蕭��鞊莎�����蕭嚙踐�蕭��蕭謍堆蕭謕蕭��蕭豲嚙踐��*/
+.ui-selectmenu-button.ui-button {
+    width: 7em;
+}
+/*Select嚙踝蕭謕蕭豲���嚙踝蕭��鞊莎�����蕭嚙踐�蕭��蕭謍堆蕭謕蕭��蕭豲嚙踐��*/
+.ui-selectmenu-button,ui-button,ui-widget,ui-selectmenu-button-open,ui-corner-top{
+    background-color: white;
+}
+
+/* 蝯字egion閮剔蔭擃漲��� */
+.overflow {
+      height: 250px;
+}
+
+/* 隤踵���”�撖砍漲 */
+#order-button{
+	width: 12em;
+}
+
+
+#dateStart{
+    width: 100px;
+    margin-right: -10px;
+    text-align: center;
+}
+#dateEnd{
+    width: 100px;
+    margin-left: -10px;
+    text-align: center;
+}
+/*search嚙踝蕭謕蕭豲��嚙踐����嚙踐的嚙踐���蕭��蕭謕蕭��鞊船����蕭��t*/
+button, input{
+    line-height:1.75;
+    vertical-align:middle;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:1em;
+}
+/*Search嚙踝蕭謕蕭豲��憪選蕭����蕭��蕭謕蕭豲*/
+.search button{
+    width: 150px;
+}
+/*���鞊舀捕嚙踐城嚙踐�蕭豲���蕭�����嚙踐���嚙踝蕭�����ㄜ嚙踝蕭謕蕭��揣嚙踝蕭謕蕭��蕭謍堆蕭謕蕭��揮�����*/
+a{
+    color: black;
+}
+a:hover{
+    color: black;
+    text-decoration:none;
+}
+/*���蕭�����������蕭豯抆*/
+.photo{
+/*    inline嚙踝蕭謕蕭豲嚙踝蕭謖雓擐桀��蕭謕蕭謕蕭���蕭嚙踐�蕭�����雓�*/
+    display: inline-block;
+    width:50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+/*     background-position: center; */
+    vertical-align: top;
+    margin-right:10px;
+}
+/*���蕭�����蕭�����蕭�����雓忽�雓蕭���蕭���蕭嚙踐�蕭豲�蕭嚙踐�蕭豲雓�蕭嚙�*/
+.profile{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+/*嚙踝蕭謕蕭豲嚙踐嚙踐嚙踝蕭謕蕭��頩���蕭*/
+#expiryDate{
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+    color: #aaaaaa;
+}
+/*嚙踝蕭謕蕭��雓�嚙踝蕭謕蕭��頩�蕭謏��雓��謅���蕭�嚙踐�蕭��蕭謍堆蕭謕蕭�����*/
+.icon{
+    width: 10px;
+    height: 10px;
+    margin-top: 0px;
+    margin-right: 6px;
+}
+/*���雓�嚙踝蕭������蕭嚙踐�蕭��雓�嚙踐的嚙踐嚙踝蕭謕蕭豲�������蕭嚙踐◆嚙踐�����蕭嚙踐�蕭豲*/
+.list-group-item{
+    padding-bottom: .3rem;
+}
+.list-group-item div{
+    margin-bottom: 5px;
+    font-size: 5px;
+    color: #484848;
+}
+
+/*嚙踝蕭謕蕭豲雓忽�雓蕭���蕭���蕭嚙踐�蕭豲頩����嚙踝蕭謕蕭��雓偃嚙踝����咱���蕭謕蕭豲雓偌�嚙踝�蕭�嚙踝蕭謕蕭��嚙踝蕭謢察嚙踝蕭謕*/
+.inlineBlock{
+    display: inline-block;
+}
+
+/*���蕭蹇蕭謅ㄜ嚙踐���蕭��蕭謕蕭豲*/
+.threePoint{
+    position: absolute;
+    top:0%;
+    right:-10px;
+}
+/*���蕭蹇蕭謅ㄜ嚙踐���蕭��蕭謕蕭豲*/
+html [type=button]{
+    -webkit-appearance:none;
+}
+
+.card-title{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.subTitle{
+/*    height: 43px;*/
+    overflow: hidden;
+    color: #3753df;
+}
+.card-body{
+    padding-bottom: .5rem;
+}
+.cardUpdate{
+	opacity:0.9;
+	margin-bottom:5px;
+	border:0;
+/*    flex-direction: row;*/
+}
+.lrpadding0{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.btnDiv{
+    margin-top: 20px;
+    
+}
+.btnDiv a{
+    margin-right: 5px;
+}
+.cardImgUpdate {
+  width: 100%;
+  height: 230px;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+.scrollBar{
+    height: 700px;
+    width: auto;
+    overflow-y:scroll;
+}
+.disappear{
+    display: none;
+}
+@media screen and (min-width: 768px){
+    .disappear{
+        display: block;
+
+    }
+}
+
+
+/* Snack嚙踐�蕭嚙踐��� */
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+
+#joinSnackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#joinSnackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+   However, delay the fade out process for 2.5 seconds */
+   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#favoriteSnackbar{
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+#favoriteSnackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+   However, delay the fade out process for 2.5 seconds */
+   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+

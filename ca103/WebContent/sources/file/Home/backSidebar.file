@@ -1,0 +1,95 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+        <div class="accordion" id="accordionExample">
+          <div class="card cardclor">
+            <div class="card-header cardclor" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <i class="text-warning fas fa-user-circle mr-2"></i><span class="text-white">員工管理</span>
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+               <a class="text-white" href="<%=request.getContextPath()%>/back-end/emp/EmpList.jsp?action=empList">
+                  <p class="pt-2 ml-5">瀏覽員工列表</p>
+                </a>
+                <a class="text-white" href="<%=request.getContextPath()%>/back-end/emp/EmpAdd.jsp?action=empAdd">
+                  <p class="ml-5">新增後台員工</p>
+                </a>
+                <a class="text-white" href="<%=request.getContextPath()%>/back-end/emp/UpdatePersonal.jsp">
+                  <p class="ml-5">個人資料編輯</p>
+                </a>
+            </div>
+          </div>
+          <div class="card cardclor">
+              <div class="card-header cardclor" id="headingTwo">
+                  <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="mr-2 text-warning fas fa-tachometer-alt"></i>
+                          <span class="text-white">路線專區管理</span>
+                      </button>
+                  </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <a class="text-white" href="<%=request.getContextPath()%>/Route/RouteServlet.do?action=getRouteList&order=route&back_manager=updataRoute">
+                    <p class="pt-2 ml-5">路線管理</p>
+                  </a>
+                  <a class="text-white" href="<%=request.getContextPath()%>/RouteMessageReport/RouteMessageReportServlet.do?action=getRotMessRepList">
+                    <p class="ml-5">路線檢舉管理</p>
+                  </a>
+              </div>
+          </div>
+          <div class="card cardclor">
+            <div class="card-header cardclor" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                   <i class="mr-2 fas fa-gavel text-warning"></i><span class="text-white"> 二手拍賣管理</span>
+                  </button>
+                </h5>
+            </div>
+            <div id="collapse5" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <a class="text-white" href="<%=request.getContextPath()%>/back-end/secondShop/CurrencyCheackout.jsp?action=currencyCheackout">
+                  <p class="pt-2 ml-5">提領審核</p>
+                </a>
+                <a class="text-white" href="<%=request.getContextPath()%>/back-end/secondShop/ProductReport.jsp?action=productReport">
+                  <p class="ml-5">商品檢舉審核</p>
+                </a>
+            </div>
+          </div>
+          <div class="card cardclor">
+            <div class="card-header cardclor" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                   <i class="mr-2 text-warning fas fa-calendar-alt"></i><span class="text-white">全台活動管理</span>
+                  </button>
+                </h5>
+            </div>
+            <div id="collapse7" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <a class="text-white" href="<%=request.getContextPath()%>/back-end/empAct/addActivity.jsp?action=addActivity">
+                <p class="pt-2 ml-5">活動新增</p>
+              </a>
+            </div>
+          </div>  
+          <div class="card cardclor">
+            <div class="card-header cardclor" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+                <i class="mr-2 text-warning fas fa-bicycle"></i><span class="text-white">揪團管理</span>
+                </button>
+              </h5>
+            </div>
+            <div id="collapse9" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <a class="text-white" href="<%=request.getContextPath()%>/back-end/gp/GP_Manager.jsp?action=GP_Manager">
+                <p class="pt-2 ml-5">揪團管理</p>
+              </a>
+              <a class="text-white" href="<%=request.getContextPath()%>/back-end/gp/GP_Report.jsp?tab_list=tab1&action=GP_Report">
+                <p class="ml-5">揪團檢舉審核</p>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+        <!-- 瀏覽路線 -->
+		<form action="<%=request.getContextPath()%>/Route/RouteServlet.do" Method="POST" name="route_upData">
+			<input type="hidden" value="getRouteList" name="action">
+			<input type="hidden" value="route" name="order">
+			<input type="hidden" value="updataRoute" name="back_manager">
+		</form>

@@ -1,0 +1,21 @@
+      .hidden{
+        display: none;
+    }
+    
+    	.cardclor{
+      background-color: #56390485;
+    }
+    
+    html {
+  		height: 100%; 
+  	}
+  	
+    body{
+	    background-position: center;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+   		background-attachment: fixed;
+	    background-image: url(<%=request.getContextPath()%>/sources/img/map_pic1.jpg);
+    }
+    
+    

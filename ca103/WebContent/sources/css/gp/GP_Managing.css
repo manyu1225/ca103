@@ -1,0 +1,49 @@
+
+.table{
+	table-layout: fixed;
+	overflow: hidden;
+}
+#c1{
+	width:80px;
+}
+#c4{
+	width:20%;
+}
+#c7{
+	width:180px;
+}
+.table td {
+/* 	white-space: nowrap; */
+/* 	overflow: hidden; */
+/* 	text-overflow: ellipsis; */
+/* 	table-layout: fixed;  */
+/* 	word-break: break-all; */
+	overflow:hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	padding: 0px;
+}
+.table th{
+	vertical-align: middle;
+	padding: 0px;
+}
+.table img{
+	width:70px;
+	height:70px;
+}
+/* 		.imgCloumn{ */
+/* 			white-space: nowrap;  */
+/* 			overflow: hidden; */
+/* 			text-overflow: ellipsis;  */
+/* 		} */
+#c2{
+	width:100px;
+}
+a.btn-info{
+/* 	margin:5px; */
+/* 	width:100px; */
+/* 	margin-top:5px; */
+	margin-left:5px;
+/* 	margin-bottom:10px; */
+	display:inline;
+}
